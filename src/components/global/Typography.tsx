@@ -10,7 +10,7 @@ export const H3 = ({ children, className }: { children: ReactNode, className?: s
 
 export const H4 = ({ children, className }: { children: ReactNode, className?: string }) => {
 	return (
-		<h4 className={`font-bold text-3xl md:text-5xl text-primaryBlue  ${className}`}>
+		<h4 className={`font-bold text-3xl md:text-5xl leading-[48px] md:leading-[58px] text-primaryBlue  ${className}`}>
 			{children}
 		</h4>
 	)
@@ -19,7 +19,7 @@ export const H4 = ({ children, className }: { children: ReactNode, className?: s
 
 export const P = ({ children, className }: { children: ReactNode, className?: string }) => {
 	return (
-		<p className={`font-normal md:text-lg text-paraGray/70  ${className}`}>
+		<p className={`font-normal md:text-lg leading-8 text-paraGray/70  ${className}`}>
 			{children}
 		</p>
 	)

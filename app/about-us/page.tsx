@@ -6,23 +6,26 @@ import AboutUs from "@/src/components/home/AboutUs";
 import ClientFeedback from "@/src/components/home/ClientFeedback";
 import Footer from "@/src/components/home/Footer";
 import ContactUs from "@/src/components/home/ContactUs";
+import Story from "@/src/components/about/Story";
+import AlternativeData from "@/src/components/about/AlternativeData";
+import Team from "@/src/components/about/Team";
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>
-          Fumiwo - Home
-        </title>
-      </Head>
+const About = () => {
+	return (
+		<>
+			<Head>
+				<title>
+					Fumiwo - About
+				</title>
+			</Head>
 
-      <NavBar dark />
-      <main>
-        <Hero />
-        <Solution />
-        <AboutUs />
-        <ClientFeedback />
-      </main>
-    </>
-  );
+			<NavBar />
+			<main>
+				<Story />
+				<AlternativeData />
+				<Team />
+			</main>
+		</>
+	);
 }
+export default About

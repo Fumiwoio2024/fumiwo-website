@@ -22,6 +22,7 @@ const config: Config = {
         buttonGray: '#C4C4C426',
         contactGray: '#011556B2',
         logoGray: '#B9B3B3',
+        alternativeGray: '#F4F7FA',
         offWhite: '#FAFAFA',
       }
     },
