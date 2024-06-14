@@ -22,12 +22,50 @@ const footerItems = [
 			link: '/about-us'
 		},
 		{
-			title: 'About us',
+			title: 'Contact us',
 			link: '/'
 		},
 		{
-			title: 'About us',
+			title: 'FAQ',
 			link: '/'
+		},
+	],
+	[
+		{
+			title: 'Smart data',
+			link: '/'
+		},
+		{
+			title: 'Credit risk score',
+			link: '/'
+		},
+		{
+			title: 'Fraud insights',
+			link: '/'
+		},
+	],
+	[
+		{
+			title: 'Blog',
+			link: '/'
+		},
+		{
+			title: 'Developers',
+			link: '/'
+		},
+	],
+	[
+		{
+			title: 'Linkedin',
+			link: 'linkedIn.com'
+		},
+		{
+			title: 'Twitter',
+			link: 'twitter.com/fumiwo'
+		},
+		{
+			title: 'hello@fumiwo.io',
+			link: 'mailto:hello@fumiwo.io'
 		},
 	],
 ]
@@ -38,7 +76,7 @@ const footerItems = [
 const Footer = () => {
 	return (
 		<footer className='bg-primaryBlue text-white pt-60 pb-20 '>
-			<div className='w-4/5 mx-auto md:flex space-y-12 md:space-y-0 justify-between'>
+			<div className='w-4/5 mx-auto md:flex space-y-20 md:space-y-0 justify-between'>
 				<section>
 					<Image
 						src={fmwLogoSmall}
@@ -80,13 +118,14 @@ const Footer = () => {
 						/>
 					</div>
 				</section>
+
 				<section className='grid xl:grid-cols-4 grid-cols-2 gap-14 '>
 					{headings.map((heading, hIndex) => (
 						<div key={heading} className=''>
 							<h2 className='font-semibold  md:text-lg '>{heading}</h2>
 							<div className='mt-6 md:mt-8 space-y-4 md:space-y-5 '>
-								{/*TODO: change 0 index to hITems after updating footerItems data*/}
-								{footerItems[0].map(fItem => (
+								{/*TODO: change 0 index to hIndex after updating footerItems data*/}
+								{footerItems[hIndex].map(fItem => (
 									<li key={fItem.title} className='text-sm text-logoGray list-none'>
 										<Link href={fItem.link} className='' >
 											{fItem.title}
