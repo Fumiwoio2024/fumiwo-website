@@ -19,7 +19,7 @@ const footerItems = [
 	[
 		{
 			title: 'About us',
-			link: '/'
+			link: '/about-us'
 		},
 		{
 			title: 'About us',

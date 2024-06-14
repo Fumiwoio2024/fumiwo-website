@@ -4,7 +4,9 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import Image from 'next/image';
 import logo from '@images/fumiwo-logo.png'
+import logoColor from '@images/fmw-logo-color.png'
 import { PrimaryButton } from './Buttons';
+import { useRouter, usePathname } from 'next/navigation';
 
 
 type TNav = {
@@ -19,67 +21,66 @@ type TNavLinks = TNav & {
 const navLinks: TNavLinks[] = [
 	{
 		title: 'Solutions',
-		link: '/',
+		link: '#',
 		dropDownLink: [
 			{
 				title: 'Smart data',
-				link: '/'
+				link: '#'
 			},
 			{
 				title: 'Credit risk score',
-				link: '/'
+				link: '#'
 			},
 			{
 				title: 'Fraud insights',
-				link: '/'
+				link: '#'
 			}
 		]
 	},
 	{
 		title: 'Company',
-		link: '/'
+		link: '/about-us'
 	},
 	{
 		title: 'Resources',
-		link: '/',
+		link: '#',
 		dropDownLink: [
 			{
 				title: 'Blog',
-				link: '/'
+				link: '#'
 			},
 			{
 				title: 'Developers',
-				link: '/'
+				link: '#'
 			}
 		]
 	}
 
 ]
 
-const NavBar = ({ dark }: { dark: boolean }) => {
+const NavBar = ({ dark }: { dark?: boolean }) => {
 	const [toggleDropDownName, setToggleDropDownName] = useState('')
 
 	const toggleName = (name: string) => {
 		setToggleDropDownName(prev => prev === name ? '' : name)
-
 	}
-
+	const pathname = usePathname()
 	return (
-		<nav className='bg-primaryBlue md:py-6'>
+		<nav className={` md:py-6 ${dark ? 'text-white bg-primaryBlue' : 'text-linkGray bg-white'}`}>
 			<div className="container mx-auto ">
 				<div className="flex justify-between items-center p-4">
 					<Link href="/">
 						<Image
-							src={logo}
+							src={dark ? logo : logoColor}
 							alt='logo'
 							className='max-w-[158px] cursor-pointer'
 						/>
 					</Link>
 
 
-					<ul className="hidden md:flex  space-x-4 text-linkGray ">
+					<ul className={`hidden md:flex  space-x-4 ${dark ? 'text-linkGray ' : 'text-primaryBlue'}`}>
 						{navLinks.map((navLink, index) => (
-							<li key={index} className='space-x-2'>
+							<li key={index} className={`space-x-2 ${pathname.includes(navLink.link) ? 'text-primaryGreen' : ''}`}>
 								<Link href={navLink.link}>
 									{navLink.title}
 								</Link>
