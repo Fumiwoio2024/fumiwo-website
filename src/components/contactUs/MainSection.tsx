@@ -115,7 +115,13 @@ const MainSection = () => {
 							<Input label='Subjects' placeholder='What is it about?' />
 							<Divider height={16} />
 
-							<Input label='Phone' textarea rows={4} placeholder='Tell us about your project...' />
+							<Input
+								label='Phone'
+								textareaProps={{
+									rows: 4,
+									placeholder: 'Tell us about your project...'
+								}}
+							/>
 							<Divider height={24} />
 
 							<PrimaryButton>

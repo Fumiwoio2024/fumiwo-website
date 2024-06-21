@@ -22,7 +22,7 @@ const Accordion = ({ name, selected, setSelected, children }: { name: string, se
 				)}
 			</div>
 
-			<div className={`content ${selected === name ? 'selected' : '  '}`}>
+			<div className={`content ${selected === name ? 'selected' : ' '}`}>
 				<P className='!text-sm md:!text-sm mt-5'>
 					{children}
 				</P>
