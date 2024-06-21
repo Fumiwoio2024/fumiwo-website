@@ -23,7 +23,7 @@ const Accordion = ({ name, selected, setSelected, children }: { name: string, se
 			</div>
 
 			<div className={`content ${selected === name ? 'selected' : '  '}`}>
-				<P className='!text-sm mt-5'>
+				<P className='!text-sm md:!text-sm mt-5'>
 					{children}
 				</P>
 			</div>
@@ -35,9 +35,9 @@ const FAQ = () => {
 	const [selected, setSelected] = useState('')
 
 	return (
-		<section className='grid md:flex max-w-6xl mx-auto  pb-36 mt-28 px-6'>
-			<div className=' flex-1 '>
-				<H1 className=' w-80 !leading-[58px]'>
+		<section className='grid md:flex max-w-6xl mx-auto pb-36 mt-28 px-6'>
+			<div className=' flex-1 mb-10 lg:mb-0 text-center lg:text-left'>
+				<H1 className=' lg:w-80 !leading-[58px]'>
 					Frequently Asked  Questions
 				</H1>
 			</div>

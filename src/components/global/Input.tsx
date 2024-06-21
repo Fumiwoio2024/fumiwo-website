@@ -3,16 +3,12 @@ import Divider from './Divider'
 
 type TInputProps = ({
 	label: string;
+	textareaProps?: TextareaHTMLAttributes<HTMLTextAreaElement>;
 } & InputHTMLAttributes<HTMLInputElement>)
-// | (
-// 	{
-// 		label: string;
-// 		textarea: true
-// 	} & TextareaHTMLAttributes<HTMLTextAreaElement>
-// )
 
 
-const Input = ({ label, textarea, ...props }: TInputProps) => {
+
+const Input = ({ label, textareaProps, ...props }: TInputProps) => {
 	return (
 		<div className='w-full text-inputLabel'>
 			<label htmlFor={props.name}>
@@ -20,8 +16,8 @@ const Input = ({ label, textarea, ...props }: TInputProps) => {
 			</label>
 			<Divider height={6} />
 			<div className={`w-full py-3 px-4 border border-inputBorder rounded-md focus-within:outline focus-within:border-primaryGreen`}>
-				{textarea ? (
-					<textarea id={props.name} {...props} className={`border-none outline-none bg-white w-full  ${props.className}`} />
+				{textareaProps ? (
+					<textarea id={props.name} {...textareaProps} className={`border-none outline-none bg-white w-full  ${textareaProps.className}`} />
 				) : (
 					<input id={props.name} {...props} className={`border-none outline-none bg-white w-full ${props.className}`} />
 				)
