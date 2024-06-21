@@ -44,3 +44,30 @@ body {
   /* Firefox */
 }
 }
+
+.selected-edit {
+  /* border-color:   ;*/
+}
+
+.content {
+  height: 0px;
+  overflow: hidden;
+  transition: height 300ms;
+}
+
+.content.selected {
+  height: 150px;
+  /* border-top: 1px #090F4733 solid; */
+  /* transition: height 400ms; */
+
+  .submitted-complaint {
+    background-color: #F5F8FE;
+
+    /* background-color: ${({ theme }) => theme?.colors?.purpleDark}0A; */
+    /* background-color: ${({ theme }) => theme?.colors?.purple}15; */
+    color: #12141D;
+    padding: 20px;
+    height: 310px;
+    border-radius: 10px;
+  }
+}

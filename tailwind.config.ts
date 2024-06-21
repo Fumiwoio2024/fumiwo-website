@@ -24,6 +24,13 @@ const config: Config = {
         logoGray: '#B9B3B3',
         alternativeGray: '#F4F7FA',
         offWhite: '#FAFAFA',
+        buttonTextBlue: '#011556',
+        textHeader: '#011456',
+        inputLabel: '#061C3D',
+        inputBorder: '#E6E8EC',
+      },
+      boxShadow: {
+        formShadow: '0px 16px 72px 0px #061C3D14'
       }
     },
   },

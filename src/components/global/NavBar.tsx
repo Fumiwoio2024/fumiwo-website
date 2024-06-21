@@ -21,19 +21,19 @@ type TNavLinks = TNav & {
 const navLinks: TNavLinks[] = [
 	{
 		title: 'Solutions',
-		link: '#',
+		link: '/solutions',
 		dropDownLink: [
 			{
 				title: 'Smart data',
-				link: '#'
+				link: '/solutions/smart-data',
 			},
 			{
 				title: 'Credit risk score',
-				link: '#'
+				link: '/solutions/credit-risk-score',
 			},
 			{
 				title: 'Fraud insights',
-				link: '#'
+				link: '/solutions/fraud-insights',
 			}
 		]
 	},
@@ -61,12 +61,19 @@ const navLinks: TNavLinks[] = [
 const NavBar = ({ dark }: { dark?: boolean }) => {
 	const [toggleDropDownName, setToggleDropDownName] = useState('')
 
+	window.addEventListener('click', () => {
+		setToggleDropDownName('')
+	})
+
 	const toggleName = (name: string) => {
 		setToggleDropDownName(prev => prev === name ? '' : name)
 	}
 	const pathname = usePathname()
 	return (
-		<nav className={` md:py-6 ${dark ? 'text-white bg-primaryBlue' : 'text-linkGray bg-white'}`}>
+		<nav
+			onClick={e => e.stopPropagation()}
+			className={` md:py-6 ${dark ? 'text-white bg-primaryBlue' : 'text-linkGray bg-white'}`}
+		>
 			<div className="container mx-auto ">
 				<div className="flex justify-between items-center p-4">
 					<Link href="/">
@@ -81,7 +88,7 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 					<ul className={`hidden md:flex  space-x-4 ${dark ? 'text-linkGray ' : 'text-primaryBlue'}`}>
 						{navLinks.map((navLink, index) => (
 							<li key={index} className={`space-x-2 ${pathname.includes(navLink.link) ? 'text-primaryGreen' : ''}`}>
-								<Link href={navLink.link}>
+								<Link href={navLink.dropDownLink ? '#' : navLink.link}>
 									{navLink.title}
 								</Link>
 								{navLink.dropDownLink && (
@@ -93,7 +100,7 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 										</button>
 
 										<ul className={`
-										absolute text-primaryBlue text-linkGra rounded-md bg-gray-400 py-2 
+										 absolute text-primaryBlue text-linkGra rounded-md bg-gray-400 py-2 
 									${toggleDropDownName === navLink.title ? 'block' : 'hidden'} 
 									`}>
 											{navLink.dropDownLink.map((dropDownLink, index) => (
