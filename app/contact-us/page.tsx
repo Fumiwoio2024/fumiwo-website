@@ -1,18 +1,17 @@
 import FAQ from '@/src/components/contactUs/FAQ'
 import MainSection from '@/src/components/contactUs/MainSection'
 import NavBar from '@/src/components/global/NavBar'
-import Head from 'next/head'
+import { Metadata } from 'next'
 import React from 'react'
 
-const page = () => {
+export const metadata: Metadata = {
+	title: 'Fumiwo - Contact Us',
+	description: "Fumiwo Contact Us and Faq page",
+}
+
+const ContactUs = () => {
 	return (
 		<>
-			<Head>
-				<title>
-					Fumiwo - Contact Us
-				</title>
-			</Head>
-
 			<NavBar />
 			<main>
 				<MainSection />
@@ -21,4 +20,4 @@ const page = () => {
 		</>)
 }
 
-export default page
+export default ContactUs
