@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
 import logo from '@images/fumiwo-logo.png'
 import logoColor from '@images/fmw-logo-color.png'
@@ -73,10 +73,23 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 		sideBarRef.current?.classList.toggle('!translate-x-[0%]')
 	}
 
+	// if (window !== undefined) {
+	// 	window.addEventListener('click', () => {
+	// 		setToggleDropDownName('')
+	// 	})
+	// }
 
-	window && window.addEventListener('click', () => {
-		setToggleDropDownName('')
-	})
+
+	useEffect(() => {
+		const handleClickOutside = (event: any) => {
+			setToggleDropDownName('')
+		};
+
+		window.addEventListener('click', handleClickOutside)
+		return () => {
+			window.removeEventListener('click', handleClickOutside)
+		};
+	}, []);
 
 
 	return (
@@ -87,12 +100,11 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 				toggleSideBar={toggleSideBar}
 				navLinks={navLinks}
 			/>
-		<nav
-			onClick={e => e.stopPropagation()}
+			<nav
 			className={` md:py-6 ${dark ? 'text-white bg-primaryBlue' : 'text-linkGray bg-white'}`}
 		>
-			<div className="container mx-auto ">
-				<div className="flex justify-between items-center p-4">
+				<div onClick={e => e.stopPropagation()} className="container mx-auto ">
+					<div className="flex justify-between items-center p-4">
 					<Link href="/">
 						<Image
 							src={dark ? logo : logoColor}

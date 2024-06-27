@@ -2,19 +2,19 @@ import { PrimaryButton } from '@/src/components/global/Buttons'
 import Divider from '@/src/components/global/Divider'
 import NavBar from '@/src/components/global/NavBar'
 import { H4, P } from '@/src/components/global/Typography'
-import Head from 'next/head'
+import { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
+
+export const metadata: Metadata = {
+	title: 'Fumiwo - 404',
+	description: "Fumiwo 404",
+}
+
 
 const NotFound = () => {
 	return (
 		<>
-			<Head>
-				<title>
-					Fumiwo - 404
-				</title>
-			</Head>
-
 			<NavBar />
 			<main className=' mb-44 px-6'>
 				<div className='mx-auto w-fit'>
