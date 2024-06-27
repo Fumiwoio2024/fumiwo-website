@@ -1,12 +1,81 @@
-import React from 'react'
+'use client'
+
+
+
+import React, { use, useState } from 'react'
 import { H1, H3, H5, P } from '../global/Typography'
 import Divider from '../global/Divider'
 import Link from 'next/link'
 import Input from '../global/Input'
 import { PrimaryButton } from '../global/Buttons'
+import axios from "axios"
 
 
 const MainSection = () => {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		phone: '',
+		subject: '',
+		message: '',
+	})
+
+	const onChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value
+		})
+	}
+
+	const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+		// handle form submission
+
+		// hbspt.forms.create({
+		//   region: "eu1",
+		//   portalId: "143536254",
+		//   formId: "67baae51-0580-4de1-91c7-1d0ae3b3bd85"
+		// });
+		e.preventDefault()
+		console.log(formData);
+
+		const portalId = "143536254";
+		const formGuid = "67baae51-0580-4de1-91c7-1d0ae3b3bd85";
+		const config = {
+			headers: {
+				'Content-Type': 'application/json',
+			}
+		}
+		const name = formData.name.split(" ")
+
+		const response = await axios.post(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`,
+			{
+				portalId,
+				formGuid,
+				fields: [
+					{
+						name: 'firstname',
+						value: name[0],
+					},
+					{
+						name: 'email',
+						value: formData.email,
+					},
+					{
+						name: 'lastname',
+						value: name[1],
+					},
+					{
+						name: 'message',
+						value: `${formData.subject}: ${formData.message}`,
+					},
+				],
+			},
+			config
+		);
+		return response;
+
+	}
+
 	return (
 		<section className='px-5'>
 			<div className='grid justify-between lg:grid-cols-2 grid-cols-1 gap-20 max-w-6xl mx-auto pt-14  '>
@@ -36,7 +105,7 @@ const MainSection = () => {
 							</P>
 							<Divider height={4} />
 							<Link href='mailto:hello@fumiwo.io'>
-								<H5 className=''>
+								<H5 className='text-textHeader'>
 									hello@fumiwo.io
 								</H5>
 							</Link>
@@ -101,22 +170,24 @@ const MainSection = () => {
 						</P>
 
 						<Divider height={16} />
-						<form >
+						<form onSubmit={submitHandler} >
 							<div className='lg:flex gap-4'>
-								<Input label='Name' placeholder='Full name' />
+								<Input name='name' label='Name' placeholder='Full name' onChange={onChangeValue} />
 								<Divider height={16} className='lg:hidden' />
-								<Input label='Email' placeholder='Email address' />
+								<Input name='email' label='Email' placeholder='Email address' onChange={onChangeValue} />
 							</div>
 							<Divider height={16} />
 
-							<Input label='Phone' placeholder='Phone number' />
+							<Input name='phone' label='Phone' placeholder='Phone number' onChange={onChangeValue} />
 							<Divider height={16} />
 
-							<Input label='Subjects' placeholder='What is it about?' />
+							<Input name='subject' label='Subjects' placeholder='What is it about?' onChange={onChangeValue} />
 							<Divider height={16} />
 
 							<Input
-								label='Phone'
+								name='message'
+								label='Message'
+								onChange={onChangeValue}
 								textareaProps={{
 									rows: 4,
 									placeholder: 'Tell us about your project...'
@@ -124,7 +195,7 @@ const MainSection = () => {
 							/>
 							<Divider height={24} />
 
-							<PrimaryButton>
+							<PrimaryButton className=' lg:inline block mx-auto'>
 								Submit
 							</PrimaryButton>
 

@@ -9,7 +9,7 @@ const page = () => {
 		<>
 			<Head>
 				<title>
-					Fumiwo - Solutions
+					Fumiwo - Contact Us
 				</title>
 			</Head>
 

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 export const H1 = ({ children, className }: { children: ReactNode, className?: string }) => {
 	return (
-		<h1 className={`font-bold text-3xl lg:text-5xl leading-[48px] md:leading-[58px] text-primaryBlue  ${className}`}>
+		<h1 className={`font-bold text-3xl lg:text-5xl leading-[48px] md:leading-[58px] text-textHeader  ${className}`}>
 			{children}
 		</h1>
 	)
