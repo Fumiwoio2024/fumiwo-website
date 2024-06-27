@@ -74,7 +74,7 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 	}
 
 
-	window.addEventListener('click', () => {
+	window && window.addEventListener('click', () => {
 		setToggleDropDownName('')
 	})
 
