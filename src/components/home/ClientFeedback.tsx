@@ -31,7 +31,7 @@ const ClientFeedback = () => {
 						</button>
 					</div>
 				</div>
-				<div className='md:w-3/5  border-[16px] border-primaryGreen p-12 rounded-2xl space-y-8 '>
+				<div className='md:w-3/5  border-[8px] border-primaryGreen p-12 rounded-2xl space-y-8 '>
 
 					{/* stars */}
 					<div className='flex gap-2'>

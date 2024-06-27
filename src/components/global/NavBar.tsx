@@ -1,12 +1,13 @@
 'use client'
 
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image';
 import logo from '@images/fumiwo-logo.png'
 import logoColor from '@images/fmw-logo-color.png'
 import { PrimaryButton } from './Buttons';
 import { useRouter, usePathname } from 'next/navigation';
+import { SideBar } from './SideBar';
 
 
 type TNav = {
@@ -14,7 +15,7 @@ type TNav = {
 	link: string;
 }
 
-type TNavLinks = TNav & {
+export type TNavLinks = TNav & {
 	dropDownLink?: TNav[];
 }
 
@@ -27,10 +28,10 @@ const navLinks: TNavLinks[] = [
 				title: 'Smart data',
 				link: '/solutions/smart-data',
 			},
-			{
-				title: 'Credit risk score',
-				link: '/solutions/credit-risk-score',
-			},
+			// {
+			// 	title: 'Credit risk score',
+			// 	link: '/solutions/credit-risk-score',
+			// },
 			{
 				title: 'Fraud insights',
 				link: '/solutions/fraud-insights',
@@ -60,16 +61,32 @@ const navLinks: TNavLinks[] = [
 
 const NavBar = ({ dark }: { dark?: boolean }) => {
 	const [toggleDropDownName, setToggleDropDownName] = useState('')
+	const pathname = usePathname()
+	const sideBarRef = useRef<HTMLDivElement>(null)
+
+
+	const toggleName = (name: string) => {
+		setToggleDropDownName(prev => prev === name ? '' : name)
+	}
+
+	const toggleSideBar = () => {
+		sideBarRef.current?.classList.toggle('!translate-x-[0%]')
+	}
+
 
 	window.addEventListener('click', () => {
 		setToggleDropDownName('')
 	})
 
-	const toggleName = (name: string) => {
-		setToggleDropDownName(prev => prev === name ? '' : name)
-	}
-	const pathname = usePathname()
+
 	return (
+		<>
+
+			<SideBar
+				ref={sideBarRef}
+				toggleSideBar={toggleSideBar}
+				navLinks={navLinks}
+			/>
 		<nav
 			onClick={e => e.stopPropagation()}
 			className={` md:py-6 ${dark ? 'text-white bg-primaryBlue' : 'text-linkGray bg-white'}`}
@@ -85,7 +102,7 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 					</Link>
 
 
-					<ul className={`hidden md:flex  space-x-4 ${dark ? 'text-linkGray ' : 'text-primaryBlue'}`}>
+						<ul className={`hidden md:flex  space-x-8 ${dark ? 'text-linkGray ' : 'text-primaryBlue'}`}>
 						{navLinks.map((navLink, index) => (
 							<li key={index} className={`space-x-2 ${pathname.includes(navLink.link) ? 'text-primaryGreen' : ''}`}>
 								<Link href={navLink.dropDownLink ? '#' : navLink.link}>
@@ -117,13 +134,13 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 						))}
 					</ul>
 
-					<PrimaryButton className='hidden md:block'>
+						<PrimaryButton className='hidden lg:block'>
 						Start free trial
 					</PrimaryButton>
 
 
 
-					<button className='md:hidden'>
+						<button onClick={toggleSideBar} className='md:hidden'>
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M3 6H21M3 12H21M3 18H21" stroke="#BAB7B7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
@@ -132,6 +149,9 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 				</div>
 			</div>
 		</nav>
+
+
+		</>
 	)
 }
 
