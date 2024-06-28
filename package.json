@@ -6,7 +6,8 @@
     "dev": "next dev --port 3005",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel": "git switch main && git pull origin main && git push personal main"
   },
   "dependencies": {
     "axios": "^1.7.2",
