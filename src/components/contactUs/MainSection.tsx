@@ -11,14 +11,19 @@ import { PrimaryButton } from '../global/Buttons'
 import axios from "axios"
 
 
+const defaultValues = {
+	name: '',
+	email: '',
+	phone: '',
+	subject: '',
+	message: '',
+}
+
 const MainSection = () => {
-	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		phone: '',
-		subject: '',
-		message: '',
-	})
+	const [formData, setFormData] = useState(defaultValues)
+	const [error, setError] = useState('')
+	const [success, setSuccess] = useState('')
+
 
 	const onChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setFormData({
@@ -28,15 +33,7 @@ const MainSection = () => {
 	}
 
 	const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-		// handle form submission
-
-		// hbspt.forms.create({
-		//   region: "eu1",
-		//   portalId: "143536254",
-		//   formId: "67baae51-0580-4de1-91c7-1d0ae3b3bd85"
-		// });
 		e.preventDefault()
-		console.log(formData);
 
 		const portalId = "143536254";
 		const formGuid = "67baae51-0580-4de1-91c7-1d0ae3b3bd85";
@@ -72,8 +69,13 @@ const MainSection = () => {
 			},
 			config
 		);
-		return response;
-
+		response;
+		if (response.status === 200) {
+			setFormData(defaultValues)
+			setSuccess(response.data?.inlineMessage || 'Thank you for contacting us!')
+		} else {
+			setError(response.data?.message || 'An error occurred, please try again')
+		}
 	}
 
 	return (
@@ -172,28 +174,35 @@ const MainSection = () => {
 						<Divider height={16} />
 						<form onSubmit={submitHandler} >
 							<div className='lg:flex gap-4'>
-								<Input name='name' label='Name' placeholder='Full name' onChange={onChangeValue} />
+								<Input name='name' label='Name' placeholder='Full name' value={formData.name} onChange={onChangeValue} />
 								<Divider height={16} className='lg:hidden' />
-								<Input name='email' label='Email' placeholder='Email address' onChange={onChangeValue} />
+								<Input name='email' label='Email' placeholder='Email address' value={formData.email} onChange={onChangeValue} />
 							</div>
 							<Divider height={16} />
 
-							<Input name='phone' label='Phone' placeholder='Phone number' onChange={onChangeValue} />
+							<Input name='phone' label='Phone' placeholder='Phone number' value={formData.phone} onChange={onChangeValue} />
 							<Divider height={16} />
 
-							<Input name='subject' label='Subjects' placeholder='What is it about?' onChange={onChangeValue} />
+							<Input name='subject' label='Subjects' placeholder='What is it about?' value={formData.subject} onChange={onChangeValue} />
 							<Divider height={16} />
 
 							<Input
 								name='message'
-								label='Message'
+								label='Message' value={formData.message}
 								onChange={onChangeValue}
 								textareaProps={{
 									rows: 4,
 									placeholder: 'Tell us about your project...'
 								}}
 							/>
-							<Divider height={24} />
+
+							{(error || success) && (
+								<p className={` text-xs mt-2  ${error ? `text-red-500` : `text-green-500`}`}>
+									{error || success}
+								</p>
+							)}
+
+							<Divider height={16} />
 
 							<PrimaryButton className=' lg:inline block mx-auto'>
 								Submit

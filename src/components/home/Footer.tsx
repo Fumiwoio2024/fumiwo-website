@@ -6,6 +6,7 @@ import { P } from '../global/Typography'
 import fmwLogoSmall from '@images/fmw-logo-small.png'
 import footerPartners from '@images/footer-partners.png'
 import Link from 'next/link'
+import NewsLetterForm from '../global/NewsLetterForm'
 
 const headings = [
 	'Company',
@@ -74,6 +75,7 @@ const footerItems = [
 
 
 const Footer = () => {
+
 	return (
 		<footer className='bg-primaryBlue text-white pt-60 pb-20 '>
 			<div className='w-4/5 mx-auto md:flex space-y-20 md:space-y-0 justify-between'>
@@ -93,18 +95,7 @@ const Footer = () => {
 						</h6>
 						<Divider className='h-3 md:h-4' />
 
-						<form className='flex w-full md:w-[386px] h-[55px] rounded-md overflow-hidden'>
-							<div className='w-2/3 bg-white py-1 px-3'>
-								<input
-									type="text"
-									placeholder='Enter Email Address'
-									className='bg-transparent border-none outline-none text-primaryBlue w-full h-full'
-								/>
-							</div>
-							<button className='h-full w-1/3 bg-primaryGreen'>
-								Subscribe
-							</button>
-						</form>
+						<NewsLetterForm />
 
 						<Divider className='h-2.5 md:h-3.5' />
 						<P className='font-medium text-sm'>
