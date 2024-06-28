@@ -10,7 +10,6 @@ import { title } from 'process'
 
 const dummyTabs = [
 	'Smart data',
-	'Credit risk score',
 	'Fraud insights',
 ]
 
@@ -18,16 +17,6 @@ const tabItemData = [
 	{
 		title: 'Making lending decisions with data enrichment',
 		description: 'We share common trends and strategies for improving your rental income and making sure you stay in high demand.',
-		image: smartData
-	},
-	{
-		title: 'Making lending decisions with data enrichment',
-		description: [
-			`Behavioral Scoring Models: Utilizes machine learning algorithms to create comprehensive behavioral scores that predict creditworthiness based on phone usage patterns.`,
-
-			`Risk Analysis: Identifies potential red flags, such as irregular activity patterns or high-risk behaviors, that may indicate credit risk.`,
-
-			`Predictive Analytics: Provides predictive insights on borrowers’ likelihood of default, repayment capabilities, and financial stability.`],
 		image: smartData
 	},
 	{
