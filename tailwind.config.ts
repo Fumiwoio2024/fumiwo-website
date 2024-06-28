@@ -30,7 +30,8 @@ const config: Config = {
         inputBorder: '#E6E8EC',
       },
       boxShadow: {
-        formShadow: '0px 16px 72px 0px #061C3D14'
+        formShadow: '0px 16px 72px 0px #061C3D14',
+        optionShadow: '0px 12px 16px 4px #10182814;'
       }
     },
   },
