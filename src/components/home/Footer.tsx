@@ -6,6 +6,7 @@ import { P } from '../global/Typography'
 import fmwLogoSmall from '@images/fmw-logo-small.png'
 import footerPartners from '@images/footer-partners.png'
 import Link from 'next/link'
+import NewsLetterForm from '../global/NewsLetterForm'
 
 const headings = [
 	'Company',
@@ -23,31 +24,36 @@ const footerItems = [
 		},
 		{
 			title: 'Contact us',
-			link: '/'
-		},
-		{
-			title: 'FAQ',
-			link: '/'
+			link: '/contact-us'
 		},
 	],
 	[
 		{
 			title: 'Smart data',
-			link: '/'
-		},
-		{
-			title: 'Credit risk score',
-			link: '/'
+			link: '/solutions/smart-data',
 		},
 		{
 			title: 'Fraud insights',
-			link: '/'
+			link: '/solutions/fraud-insights',
 		},
 	],
 	[
+		// {
+		// 	title: 'Blog',
+		// 	link: '/'
+		// },
+
 		{
-			title: 'Blog',
-			link: '/'
+			title: 'Terms & Conditions',
+			link: '/terms-conditions'
+		},
+		{
+			title: 'Cookie Policy',
+			link: '/cookie-policy'
+		},
+		{
+			title: 'Privacy Policy',
+			link: '/privacy-policy'
 		},
 		{
 			title: 'Developers',
@@ -74,6 +80,7 @@ const footerItems = [
 
 
 const Footer = () => {
+
 	return (
 		<footer className='bg-primaryBlue text-white pt-60 pb-20 '>
 			<div className='w-4/5 mx-auto md:flex space-y-20 md:space-y-0 justify-between'>
@@ -83,7 +90,7 @@ const Footer = () => {
 						alt='company logo'
 					/>
 					<Divider className='h-3 md:h-4' />
-					<P className='text-logoGray'>
+					<P className='!text-logoGray'>
 						Better data for better decisions
 					</P>
 					<Divider height={32} />
@@ -93,21 +100,10 @@ const Footer = () => {
 						</h6>
 						<Divider className='h-3 md:h-4' />
 
-						<form className='flex w-full md:w-[386px] h-[55px] rounded-md overflow-hidden'>
-							<div className='w-2/3 bg-white py-1 px-3'>
-								<input
-									type="text"
-									placeholder='Enter Email Address'
-									className='bg-transparent border-none outline-none text-primaryBlue w-full h-full'
-								/>
-							</div>
-							<button className='h-full w-1/3 bg-primaryGreen'>
-								Subscribe
-							</button>
-						</form>
+						<NewsLetterForm />
 
 						<Divider className='h-2.5 md:h-3.5' />
-						<P className='font-medium text-sm'>
+						<P className='font-medium text-sm !text-logoGray'>
 							By subscribing, you agree to our privacy policy
 						</P>
 						<Divider height={68} />
