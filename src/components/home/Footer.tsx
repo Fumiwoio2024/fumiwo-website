@@ -24,31 +24,36 @@ const footerItems = [
 		},
 		{
 			title: 'Contact us',
-			link: '/'
-		},
-		{
-			title: 'FAQ',
-			link: '/'
+			link: '/contact-us'
 		},
 	],
 	[
 		{
 			title: 'Smart data',
-			link: '/'
-		},
-		{
-			title: 'Credit risk score',
-			link: '/'
+			link: '/solutions/smart-data',
 		},
 		{
 			title: 'Fraud insights',
-			link: '/'
+			link: '/solutions/fraud-insights',
 		},
 	],
 	[
+		// {
+		// 	title: 'Blog',
+		// 	link: '/'
+		// },
+
 		{
-			title: 'Blog',
-			link: '/'
+			title: 'Terms & Conditions',
+			link: '/terms-conditions'
+		},
+		{
+			title: 'Cookie Policy',
+			link: '/cookie-policy'
+		},
+		{
+			title: 'Privacy Policy',
+			link: '/privacy-policy'
 		},
 		{
 			title: 'Developers',
@@ -85,7 +90,7 @@ const Footer = () => {
 						alt='company logo'
 					/>
 					<Divider className='h-3 md:h-4' />
-					<P className='text-logoGray'>
+					<P className='!text-logoGray'>
 						Better data for better decisions
 					</P>
 					<Divider height={32} />
@@ -98,7 +103,7 @@ const Footer = () => {
 						<NewsLetterForm />
 
 						<Divider className='h-2.5 md:h-3.5' />
-						<P className='font-medium text-sm'>
+						<P className='font-medium text-sm !text-logoGray'>
 							By subscribing, you agree to our privacy policy
 						</P>
 						<Divider height={68} />

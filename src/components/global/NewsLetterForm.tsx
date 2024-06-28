@@ -84,11 +84,9 @@ const NewsLetterForm = () => {
 				</button>
 
 			</form>
-			{(error || success) && (
-				<p className={` text-xs mt-2  ${error ? `text-red-500` : `text-green-500`}`}>
-					{error || success}
-				</p>
-			)}
+			<p className={` text-xs mt-2  ${error ? `text-red-500` : `text-green-500`}`}>
+				{error || success}
+			</p>
 		</>
 	)
 }

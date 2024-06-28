@@ -19,7 +19,7 @@ export type TNavLinks = TNav & {
 	dropDownLink?: TNav[];
 }
 
-const navLinks: TNavLinks[] = [
+export const navLinks: TNavLinks[] = [
 	{
 		title: 'Solutions',
 		link: '/solutions',

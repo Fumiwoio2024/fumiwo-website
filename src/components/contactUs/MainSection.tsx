@@ -188,7 +188,8 @@ const MainSection = () => {
 
 							<Input
 								name='message'
-								label='Message' value={formData.message}
+								label='Message'
+								value={formData.message}
 								onChange={onChangeValue}
 								textareaProps={{
 									rows: 4,
@@ -196,11 +197,9 @@ const MainSection = () => {
 								}}
 							/>
 
-							{(error || success) && (
 								<p className={` text-xs mt-2  ${error ? `text-red-500` : `text-green-500`}`}>
 									{error || success}
-								</p>
-							)}
+							</p>
 
 							<Divider height={16} />
 
