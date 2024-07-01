@@ -29,7 +29,7 @@ const team = [
 
 const Team = () => {
 	return (
-		<section className='text-center bg-member1Gray px-5 py-20 md:py-32'>
+		<section className='text-center bg-member1Gray px-6 py-20 md:py-32'>
 
 			<div className='max-w-xl md:mx-auto'>
 				<H4>
@@ -54,7 +54,7 @@ const Team = () => {
 						</div>
 						<Divider height={30} />
 
-						<P className='font-bold text-xl text-primaryBlue'>
+						<P className='font-bold text-xl text-primaryBlack'>
 							{item.name}
 						</P>
 						<P className=''>

@@ -79,7 +79,7 @@ const MainSection = () => {
 	}
 
 	return (
-		<section className='px-5'>
+		<section className='px-6'>
 			<div className='grid justify-between lg:grid-cols-2 grid-cols-1 gap-20 max-w-6xl mx-auto pt-14  '>
 
 				<div className='lg:w-11/12 text-center lg:text-left'>
@@ -159,7 +159,7 @@ const MainSection = () => {
 
 
 				{/* RIGHT SECTION */}
-				<div className='bg-white lg:w-[648px shadow-formShadow p-12 rounded-3xl'>
+				<div className='bg-white lg:w-[648px shadow-formShadow p-12 rounded-3xl '>
 					<div>
 						<H5>
 							Request A Demo — let&apos;s work together.

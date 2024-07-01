@@ -3,12 +3,12 @@ import { H4, P } from '../global/Typography'
 import Divider from '../global/Divider'
 import { AboutUsTabs } from '../global/Tabs'
 
-const AboutUs = () => {
+const KeyFeatures = () => {
 	return (
 		<section className=' pb-32 '>
-			<div className='text-center max-w-xl mx-auto px-4'>
+			<div className='text-center max-w-xl mx-auto px-6'>
 				<H4>
-					Why <span className='text-primaryGreen'>choose us</span>
+					Key <span className='text-primaryGreen'>features</span>
 				</H4>
 				<Divider height={16} />
 				<P>
@@ -21,4 +21,4 @@ const AboutUs = () => {
 	)
 }
 
-export default AboutUs
+export default KeyFeatures

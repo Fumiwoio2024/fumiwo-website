@@ -12,15 +12,15 @@ import { P } from '../global/Typography'
 
 const SolutionsHero = ({}) => {
 	return (
-		<section className=' px-6 text-primaryBlue md:py-14 py-5 overflow-hidden'>
+		<section className=' px-6 text-primaryBlack md:py-14 py-5 overflow-hidden'>
 
 			<div className='flex justify-between items-center  lg:pl-10'>
 				<div className=' md:px-16 xl:text-left text-center space-y-4 max-w-6xl'>
 					<Tag className='xl:mx-0 mx-auto' >
 						Fraud Insights
 					</Tag>
-					<h2 className='font-bold text-4xl md:text-5xl leading-[57px] md:leading-[70px] text-primaryBlue'>
-						{'Assess creditworthy borrowers using behavioral'}
+					<h2 className='font-bold text-4xl md:text-5xl leading-[57px] md:leading-[70px] text-textHeader'>
+						Assess creditworthy borrowers using behavioral
 					</h2>
 					<P className='leading-8'>
 						Score confidently borrowers based on alternative smartphone data and unlock new market opportunities for your lending business

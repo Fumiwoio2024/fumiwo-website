@@ -7,7 +7,7 @@ import story from '@images/story.png'
 
 const Story = () => {
 	return (
-		<section className='text-center bg-white px-5 py-16'>
+		<section className='text-center bg-white px-6 py-16'>
 			<div className='max-w-xl md:mx-auto'>
 				<H4>
 					Our Story

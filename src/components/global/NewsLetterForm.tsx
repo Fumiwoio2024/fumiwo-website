@@ -76,7 +76,7 @@ const NewsLetterForm = () => {
 						name='email'
 						type="text"
 						placeholder='Enter Email Address'
-						className='bg-transparent border-none outline-none text-primaryBlue w-full h-full'
+						className='bg-transparent border-none outline-none text-primaryBlack w-full h-full'
 					/>
 				</div>
 				<button className='h-full w-1/3 bg-primaryGreen'>

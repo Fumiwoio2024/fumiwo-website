@@ -8,7 +8,7 @@ import Divider from '../global/Divider'
 
 const AlternativeData = () => {
 	return (
-		<section className='text-center bg-alternativeGray px-5 py-20 md:py-32'>
+		<section className='text-center bg-alternativeGray px-6 py-20 md:py-32'>
 
 			<div className='md:flex items-center text-left gap-10 max-w-5xl mx-auto space-y-10 md:space-y-0'>
 				<Image

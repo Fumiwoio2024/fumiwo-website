@@ -14,8 +14,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontSize: {
+        xxs: '0.625rem',
+      },
       colors: {
-        primaryBlue: '#12141D',
+        primaryBlack: '#12141D',
+        textHeader: '#011456',
         primaryGreen: '#0BE781',
         linkGray: '#BAB7B7',
         paraGray: '#404F65',
@@ -25,9 +29,9 @@ const config: Config = {
         alternativeGray: '#F4F7FA',
         offWhite: '#FAFAFA',
         buttonTextBlue: '#011556',
-        textHeader: '#011456',
         inputLabel: '#061C3D',
         inputBorder: '#E6E8EC',
+        bottomFooterBorder: '#8A8A8A'
       },
       boxShadow: {
         formShadow: '0px 16px 72px 0px #061C3D14',

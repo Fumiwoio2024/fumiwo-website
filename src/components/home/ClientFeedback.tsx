@@ -6,12 +6,12 @@ import Image from 'next/image'
 
 const ClientFeedback = () => {
 	return (
-		<div className='pb-40 px-4'>
+		<div className='pb-32 lg:pb-48 px-4'>
 
 			{/* <div className='grid md:grid-cols-2 grid-cols-1 gap-32 max-w-6xl mx-auto items-center'> */}
 			<div className='md:flex gap-20 max-w-6xl mx-auto items-center'>
-				<div className='md:w-2/5 max-w-lg mx-auto px-4'>
-					<H4>
+				<div className='md:w-2/5 max-w-lg mx-auto lg:text-left text-center '>
+					<H4 className=''>
 						What <span className='text-primaryGreen'>our clients</span> say about us
 					</H4>
 					<Divider height={48} />
@@ -31,23 +31,33 @@ const ClientFeedback = () => {
 						</button>
 					</div>
 				</div>
-				<div className='md:w-3/5  border-[8px] border-primaryGreen p-12 rounded-2xl space-y-8 '>
+				<div className='relative md:w-3/5 border-[6px] lg:border-8 border-primaryGreen p-4 lg:p-12 rounded-2xl space-y-[14px] lg:space-y-8 '>
 
 					{/* stars */}
 					<div className='flex gap-2'>
-						{[...Array(5)].map((_, index) => (
-							<svg key={index} width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						{[...Array(5)].map((_, index) =>
+							<>
+								<svg key={index} width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg" className='lg:block hidden'>
 								<path d="M19.4424 0.994252C18.8001 -0.112665 17.2016 -0.11267 16.5593 0.994252L12.0359 8.78977C11.7186 9.33657 11.1701 9.70972 10.545 9.80414L2.06785 11.0845C0.64405 11.2996 0.144618 13.0972 1.25346 14.0159L7.56861 19.2479C8.15318 19.7323 8.42805 20.4962 8.28605 21.2419L6.6341 29.9172C6.37296 31.2885 7.81261 32.3541 9.04785 31.7037L17.0302 27.5006C17.6378 27.1807 18.3639 27.1807 18.9715 27.5006L26.9538 31.7037C28.1891 32.3541 29.6287 31.2885 29.3676 29.9172L27.7156 21.2419C27.5736 20.4962 27.8485 19.7323 28.4331 19.2479L34.7482 14.0159C35.857 13.0972 35.3576 11.2996 33.9338 11.0845L25.4566 9.80414C24.8315 9.70972 24.2831 9.33657 23.9658 8.78977L19.4424 0.994252Z" fill="#FF8800" />
 							</svg>
-						))}
+								<svg key={index} width="16" height="16" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg" className='lg:hidden'>
+									<path d="M19.4424 0.994252C18.8001 -0.112665 17.2016 -0.11267 16.5593 0.994252L12.0359 8.78977C11.7186 9.33657 11.1701 9.70972 10.545 9.80414L2.06785 11.0845C0.64405 11.2996 0.144618 13.0972 1.25346 14.0159L7.56861 19.2479C8.15318 19.7323 8.42805 20.4962 8.28605 21.2419L6.6341 29.9172C6.37296 31.2885 7.81261 32.3541 9.04785 31.7037L17.0302 27.5006C17.6378 27.1807 18.3639 27.1807 18.9715 27.5006L26.9538 31.7037C28.1891 32.3541 29.6287 31.2885 29.3676 29.9172L27.7156 21.2419C27.5736 20.4962 27.8485 19.7323 28.4331 19.2479L34.7482 14.0159C35.857 13.0972 35.3576 11.2996 33.9338 11.0845L25.4566 9.80414C24.8315 9.70972 24.2831 9.33657 23.9658 8.78977L19.4424 0.994252Z" fill="#FF8800" />
+								</svg>
+							</>
+						)}
 					</div>
 
-					<P>
+					{/* Desktop */}
+					<P className=' hidden lg:block'>
 						Mixed feelings but adequate results. Pros: technical skills & Intuition about colors, fonts, & layout styles. Cons: Communication, English, Detail Orientation, Creativity, Following the Brief (Style guide, sample website, text requested). Off the mark 2 day delivery, and 5-days of revision for one landing (good) page.
 					</P>
 
-					<div className='flex justify-between'>
-						<div className='flex gap-3'>
+					{/* Mobile */}
+					<P className=' lg:hidden '>
+						Data analysis software is a type of software tool used for data analysis and reporting. It is designed to help businesses, organizations.
+					</P>
+
+					<div className='w-fit flex gap-3 justify-between items-center'>
 							<div>
 								<Image
 									src={customer1}
@@ -55,24 +65,31 @@ const ClientFeedback = () => {
 								/>
 							</div>
 							<div>
-								<P className='font-bold '>
+							<P className=' !text-inputLabel  leading-6'>
 									Arlene McCoy
 								</P>
-								<P>
+							<P className=' leading-6'>
 									Golio
 								</P>
 							</div>
 						</div>
 
-						<div className='w-fit ml-auto md:mr-10 mr-2 '>
-							<svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path opacity="0.2" d="M43.875 58.5H16.25C15.388 58.5 14.5614 58.1576 13.9519 57.5481C13.3424 56.9386 13 56.112 13 55.25V29.25C13 28.388 13.3424 27.5614 13.9519 26.9519C14.5614 26.3424 15.388 26 16.25 26H40.625C41.487 26 42.3136 26.3424 42.9231 26.9519C43.5326 27.5614 43.875 28.388 43.875 29.25V58.5Z" fill="#0BE781" />
-								<path opacity="0.2" d="M91 58.5H63.375C62.513 58.5 61.6864 58.1576 61.0769 57.5481C60.4674 56.9386 60.125 56.112 60.125 55.25V29.25C60.125 28.388 60.4674 27.5614 61.0769 26.9519C61.6864 26.3424 62.513 26 63.375 26H87.75C88.612 26 89.4386 26.3424 90.0481 26.9519C90.6576 27.5614 91 28.388 91 29.25V58.5Z" fill="#0BE781" />
-								<path d="M43.875 58.5H16.25C15.388 58.5 14.5614 58.1576 13.9519 57.5481C13.3424 56.9386 13 56.112 13 55.25V29.25C13 28.388 13.3424 27.5614 13.9519 26.9519C14.5614 26.3424 15.388 26 16.25 26H40.625C41.487 26 42.3136 26.3424 42.9231 26.9519C43.5326 27.5614 43.875 28.388 43.875 29.25V65C43.875 69.3098 42.163 73.443 39.1155 76.4905C36.068 79.538 31.9348 81.25 27.625 81.25" stroke="#0BE781" stroke-width="6.70968" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M91 58.5H63.375C62.513 58.5 61.6864 58.1576 61.0769 57.5481C60.4674 56.9386 60.125 56.112 60.125 55.25V29.25C60.125 28.388 60.4674 27.5614 61.0769 26.9519C61.6864 26.3424 62.513 26 63.375 26H87.75C88.612 26 89.4386 26.3424 90.0481 26.9519C90.6576 27.5614 91 28.388 91 29.25V65C91 69.3098 89.288 73.443 86.2405 76.4905C83.193 79.538 79.0598 81.25 74.75 81.25" stroke="#0BE781" stroke-width="6.70968" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
+					<div className='absolute w-fit ml-auto md:mr-10 mr-2 bottom-2 right-0'>
+						<svg width="48" height="32" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg" className='lg:hidden'>
+							<path opacity="0.2" d="M43.875 58.5H16.25C15.388 58.5 14.5614 58.1576 13.9519 57.5481C13.3424 56.9386 13 56.112 13 55.25V29.25C13 28.388 13.3424 27.5614 13.9519 26.9519C14.5614 26.3424 15.388 26 16.25 26H40.625C41.487 26 42.3136 26.3424 42.9231 26.9519C43.5326 27.5614 43.875 28.388 43.875 29.25V58.5Z" fill="#0BE781" />
+							<path opacity="0.2" d="M91 58.5H63.375C62.513 58.5 61.6864 58.1576 61.0769 57.5481C60.4674 56.9386 60.125 56.112 60.125 55.25V29.25C60.125 28.388 60.4674 27.5614 61.0769 26.9519C61.6864 26.3424 62.513 26 63.375 26H87.75C88.612 26 89.4386 26.3424 90.0481 26.9519C90.6576 27.5614 91 28.388 91 29.25V58.5Z" fill="#0BE781" />
+							<path d="M43.875 58.5H16.25C15.388 58.5 14.5614 58.1576 13.9519 57.5481C13.3424 56.9386 13 56.112 13 55.25V29.25C13 28.388 13.3424 27.5614 13.9519 26.9519C14.5614 26.3424 15.388 26 16.25 26H40.625C41.487 26 42.3136 26.3424 42.9231 26.9519C43.5326 27.5614 43.875 28.388 43.875 29.25V65C43.875 69.3098 42.163 73.443 39.1155 76.4905C36.068 79.538 31.9348 81.25 27.625 81.25" stroke="#0BE781" stroke-width="6.70968" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M91 58.5H63.375C62.513 58.5 61.6864 58.1576 61.0769 57.5481C60.4674 56.9386 60.125 56.112 60.125 55.25V29.25C60.125 28.388 60.4674 27.5614 61.0769 26.9519C61.6864 26.3424 62.513 26 63.375 26H87.75C88.612 26 89.4386 26.3424 90.0481 26.9519C90.6576 27.5614 91 28.388 91 29.25V65C91 69.3098 89.288 73.443 86.2405 76.4905C83.193 79.538 79.0598 81.25 74.75 81.25" stroke="#0BE781" stroke-width="6.70968" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
 
-						</div>
+						{/* Mobile */}
+						<svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg" className='hidden lg:block'>
+							<path opacity="0.2" d="M43.875 58.5H16.25C15.388 58.5 14.5614 58.1576 13.9519 57.5481C13.3424 56.9386 13 56.112 13 55.25V29.25C13 28.388 13.3424 27.5614 13.9519 26.9519C14.5614 26.3424 15.388 26 16.25 26H40.625C41.487 26 42.3136 26.3424 42.9231 26.9519C43.5326 27.5614 43.875 28.388 43.875 29.25V58.5Z" fill="#0BE781" />
+							<path opacity="0.2" d="M91 58.5H63.375C62.513 58.5 61.6864 58.1576 61.0769 57.5481C60.4674 56.9386 60.125 56.112 60.125 55.25V29.25C60.125 28.388 60.4674 27.5614 61.0769 26.9519C61.6864 26.3424 62.513 26 63.375 26H87.75C88.612 26 89.4386 26.3424 90.0481 26.9519C90.6576 27.5614 91 28.388 91 29.25V58.5Z" fill="#0BE781" />
+							<path d="M43.875 58.5H16.25C15.388 58.5 14.5614 58.1576 13.9519 57.5481C13.3424 56.9386 13 56.112 13 55.25V29.25C13 28.388 13.3424 27.5614 13.9519 26.9519C14.5614 26.3424 15.388 26 16.25 26H40.625C41.487 26 42.3136 26.3424 42.9231 26.9519C43.5326 27.5614 43.875 28.388 43.875 29.25V65C43.875 69.3098 42.163 73.443 39.1155 76.4905C36.068 79.538 31.9348 81.25 27.625 81.25" stroke="#0BE781" stroke-width="6.70968" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M91 58.5H63.375C62.513 58.5 61.6864 58.1576 61.0769 57.5481C60.4674 56.9386 60.125 56.112 60.125 55.25V29.25C60.125 28.388 60.4674 27.5614 61.0769 26.9519C61.6864 26.3424 62.513 26 63.375 26H87.75C88.612 26 89.4386 26.3424 90.0481 26.9519C90.6576 27.5614 91 28.388 91 29.25V65C91 69.3098 89.288 73.443 86.2405 76.4905C83.193 79.538 79.0598 81.25 74.75 81.25" stroke="#0BE781" stroke-width="6.70968" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+
 					</div>
 				</div>
 				<div className=' md:hidden' >
