@@ -34,7 +34,7 @@ export const H5 = ({ children, className }: { children: ReactNode, className?: s
 
 export const P = ({ children, className }: { children: ReactNode, className?: string }) => {
 	return (
-		<p className={`font-normal md:text-lg leading-8 text-paraGray/70  ${className}`}>
+		<p className={`font-normal md:text-lg text-paraGray/70 ${className?.includes('leading') ? className : `!leading-8 ${className}`}`}>
 			{children}
 		</p>
 	)

@@ -5,6 +5,7 @@ import Divider from '../global/Divider'
 import heroImage from '@images/hero-laptop.png'
 import landingHero from '@images/landing-hero.png'
 import partners from '@images/partners.png'
+import newHero from '@images/new-hero.png'
 
 const Hero = () => {
 	return (
@@ -25,7 +26,7 @@ const Hero = () => {
 				</div>
 				<div className='xl:flex hidden '>
 					<Image
-						src={landingHero}
+						src={newHero}
 						alt='hero'
 						className='max-w-2xl pl-5'
 					/>
@@ -34,7 +35,7 @@ const Hero = () => {
 
 			<Divider height={100} />
 
-			<div className='text-center w-fit mx-auto font-semibold md:text-2xl '>
+			<div className='px-6 lg:px-0 text-center w-fit mx-auto font-semibold md:text-2xl '>
 				<h6>
 					Trusted by leading global finance partners
 				</h6>
