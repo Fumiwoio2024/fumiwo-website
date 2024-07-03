@@ -35,11 +35,11 @@ const Story = () => {
 				</H4>
 				<div className='md:w-5/12'>
 					<P >
-						In today's rapidly evolving financial landscape, making informed and accurate credit decisions is more critical than ever. Traditional credit scoring models often fall short in capturing the complete financial picture of potential borrowers, especially those with limited credit histories and lack of financial footprints.
+						In todays rapidly evolving financial landscape, making informed and accurate credit decisions is more critical than ever. Traditional credit scoring models often fall short in capturing the complete financial picture of potential borrowers, especially those with limited credit histories and lack of financial footprints.
 
 						<br />
 						<br />
-						That's where our cutting-edge credit scoring solution, leveraging smartphone metadata, comes into play.		
+						Thats where our cutting-edge credit scoring solution, leveraging smartphone metadata, comes into play.		
 					</P>
 				</div>
 			</div>

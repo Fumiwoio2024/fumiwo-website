@@ -1,29 +1,35 @@
 import React from 'react'
-import member1 from '@images/member1.png'
 import Image from 'next/image'
 import { H4, P } from '../global/Typography'
 import Divider from '../global/Divider'
+
+import member1 from '@images/member1.png'
+import member5 from '@images/leslie.png'
+import member4 from '@images/sebastian2.png'
+import member3 from '@images/dedonker.png'
+import member2 from '@images/kayode.png'
+
 
 const team = [
 	{
 		name: 'Olu-Kayodé Karim AMADOU',
 		role: 'CEO & Founder',
-		image: member1
+		image: member2
 	},
 	{
 		name: 'Sébastien Doncker',
 		role: 'Chief Technology Officer',
-		image: member1
+		image: member3
 	},
 	{
 		name: 'Sébastien Dumas',
 		role: 'Chief Marketing Officer',
-		image: member1
+		image: member4
 	},
 	{
 		name: 'Leslie Alexander',
 		role: 'Data Scientist',
-		image: member1
+		image: member5
 	},
 ]
 
