@@ -3,12 +3,13 @@ import { H4, P } from '../global/Typography'
 import Divider from '../global/Divider'
 import Image from 'next/image'
 import story from '@images/story.png'
+import newStory from '@images/new-story.png'
 
 
 const Story = () => {
 	return (
 		<section className='text-center bg-white px-6 py-16'>
-			<div className='max-w-xl md:mx-auto'>
+			<div className='max-w-4xl md:mx-auto'>
 				<H4>
 					Our Story
 				</H4>
@@ -22,21 +23,20 @@ const Story = () => {
 
 			<div className='max-w-5xl mx-auto '>
 				<Image
-					src={story}
+					src={newStory}
 					alt='story'
 					className='w-full'
 				/>
 			</div>
 			<Divider className='h-20 md:h-32' />
 
-			<div className='md:flex text-left gap-10 max-w-5xl mx-auto'>
-				<H4 className='md:w-6/12 md:!leading-[72px]'>
+			<div className='md:flex text-left gap-16 max-w-5xl mx-auto'>
+				<H4 className='md:w-7/12 md:!leading-[72px] text-justify'>
 					We exist to help you make better credit decisions and reduce defaults
 				</H4>
-				<div className='md:w-5/12'>
+				<div className='md:w-5/12 '>
 					<P >
 						In todays rapidly evolving financial landscape, making informed and accurate credit decisions is more critical than ever. Traditional credit scoring models often fall short in capturing the complete financial picture of potential borrowers, especially those with limited credit histories and lack of financial footprints.
-
 						<br />
 						<br />
 						Thats where our cutting-edge credit scoring solution, leveraging smartphone metadata, comes into play.		
