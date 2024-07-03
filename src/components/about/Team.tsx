@@ -6,23 +6,23 @@ import Divider from '../global/Divider'
 
 const team = [
 	{
-		name: 'John Doe',
-		role: 'CEO',
+		name: 'Olu-Kayodé Karim AMADOU',
+		role: 'CEO & Founder',
 		image: member1
 	},
 	{
-		name: 'John Doe',
-		role: 'CEO',
+		name: 'Sébastien Doncker',
+		role: 'Chief Technology Officer',
 		image: member1
 	},
 	{
-		name: 'John Doe',
-		role: 'CEO',
+		name: 'Sébastien Dumas',
+		role: 'Chief Marketing Officer',
 		image: member1
 	},
 	{
-		name: 'John Doe',
-		role: 'CEO',
+		name: 'Leslie Alexander',
+		role: 'Data Scientist',
 		image: member1
 	},
 ]
