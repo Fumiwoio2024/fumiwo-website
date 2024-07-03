@@ -17,6 +17,7 @@ const config: Config = {
       fontSize: {
         xxs: '0.625rem',
       },
+
       colors: {
         primaryBlack: '#12141D',
         textHeader: '#011456',
