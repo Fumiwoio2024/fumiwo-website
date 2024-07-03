@@ -396,7 +396,7 @@ export const AboutUsTabs = () => {
 							{dummyAboutTabs.map((tab, index) => (
 								<button
 									key={index}
-									className={`w-full font-bold py-2 cursor-pointer border-r-4 ${selectedTab === index ? ' text-primaryBlack border-textHeader' : ' border-transparent text-paraGray/70'}`}
+									className={`w-full font-bold py-2 cursor-pointer border-r-4 ${selectedTab === index ? ' text-textHeader border-textHeader' : ' border-transparent text-paraGray/70'}`}
 									onClick={() => setSelectedTab(index)}
 								>
 									{tab}
