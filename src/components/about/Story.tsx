@@ -14,7 +14,7 @@ const Story = () => {
 				</H4>
 				<Divider height={16} />
 				<P className=''>
-					Lorem ipsum dolor sit amet consectetur. Porta orci sed pretium nec dui etiam vitae pharetra. Aliquet sed ultrices rhoncus lacinia nibh vulputate viverra lacus porttitor.
+					Fumiwo was founded with the aim to bridge the accessing gap of credit in Africa and improve financial inclusion of billions of individuals by developing innovative credit scoring solutions. We’re harnessing next generation technologies—from machine learning to AI—to build trusted, global standard solutions.
 				</P>
 			</div>
 
@@ -30,15 +30,16 @@ const Story = () => {
 			<Divider className='h-20 md:h-32' />
 
 			<div className='md:flex text-left gap-10 max-w-5xl mx-auto'>
-				<H4 className='md:w-7/12'>
+				<H4 className='md:w-6/12 md:!leading-[72px]'>
 					We exist to help you make better credit decisions and reduce defaults
 				</H4>
 				<div className='md:w-5/12'>
 					<P >
-						We share common trends and strategies for improving your rental income and making sure you stay in high demand of service.
+						In today's rapidly evolving financial landscape, making informed and accurate credit decisions is more critical than ever. Traditional credit scoring models often fall short in capturing the complete financial picture of potential borrowers, especially those with limited credit histories and lack of financial footprints.
+
 						<br />
 						<br />
-						With lots of unique blocks, you can easily build a page without coding. Build your next landing page. With lots of unique blocks, you can easily build a page without coding any other page.
+						That's where our cutting-edge credit scoring solution, leveraging smartphone metadata, comes into play.		
 					</P>
 				</div>
 			</div>

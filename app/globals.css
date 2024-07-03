@@ -45,8 +45,11 @@ body {
 }
 }
 
-.selected-edit {
-  /* border-color:   ;*/
+.custom-sticky {
+  /* Safari */
+  position: -webkit-sticky;
+  /* Standard */
+  position: sticky;
 }
 
 .content {

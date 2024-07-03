@@ -6,7 +6,7 @@ import { AboutUsTabs } from '../global/Tabs'
 const KeyFeatures = () => {
 	return (
 		<section className=' pb-32 '>
-			<div className='text-center max-w-xl mx-auto px-6 sticky top-0'>
+			<div className='text-center max-w-xl mx-auto px-6 '>
 				<H4 className='md:!leading-[72px] max-w-xl mx-auto  '>
 					Key <span className='text-primaryGreen'>features</span>
 				</H4>

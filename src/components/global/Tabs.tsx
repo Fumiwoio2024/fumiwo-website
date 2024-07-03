@@ -316,8 +316,7 @@ export const AboutUsTabs = () => {
 	return (
 		<div className='sm:px-10 px-3'>
 			<div className='md:block hidden '>
-				<div className='flex gap-16 xl:max-w-6xl mx-auto my-14'>
-
+				<div className='flex gap-16 xl:max-w-6xl mx-auto my-14 sticky top-[2200px]'>
 					<div className='w-1/5 '>
 						<div className=' border-paraGray/30 border-r space-y-11'>
 							{dummyAboutTabs.map((tab, index) => (
