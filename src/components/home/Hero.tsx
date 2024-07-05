@@ -6,15 +6,16 @@ import heroImage from '@images/hero-laptop.png'
 import landingHero from '@images/landing-hero.png'
 import partners from '@images/partners.png'
 import newHero from '@images/new-hero.png'
+import newerHero from '@images/newer-hero.png'
 
 const Hero = () => {
 	return (
 		<section className='bg-primaryBlack px- text-white md:py-14 py-5 overflow-hidden'>
 
-			<div className='flex gap-4 justify-between items-center px-4 container lg:pl- mx-auto'>
+			<div className='flex gap-4 justify-betwee items-center px-4 lg:pr-0 container  mx-auto'>
 				<div className='px-2 md:px-0 xl:text-left text-center space-y-4 '>
-					<h2 className='font-bold text-4xl  xl:mr-3 mr-0 md:text-5xl leading-[57px] md:leading-[78px] text-offWhite'>Assess creditworthy borrowers
-						using <span className='text-primaryGreen underline'>behavioral analytics</span>
+					<h2 className='font-bold text-4xl  xl:mr-3 mr-0 md:text-5xl leading-[57px] md:leading-[78px] text-offWhite'>Assess <span className='text-primaryGreen underline'>creditworthy</span>  borrowers
+						using <span className='text-primaryGreen underline'>behavioral</span> analytics
 					</h2>
 					<h5 className='text-linkGray leading-8'>
 						Score confidently borrowers based on alternative smartphone data and unlock new market opportunities for your lending business.
@@ -26,7 +27,7 @@ const Hero = () => {
 				</div>
 				<div className='xl:flex hidden '>
 					<Image
-						src={newHero}
+						src={newerHero}
 						alt='hero'
 						className='max-w-2xl pl-5'
 					/>

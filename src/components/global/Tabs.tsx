@@ -410,6 +410,7 @@ function useOnScreen(ref: MutableRefObject<HTMLDivElement | null>) {
 			setIsOnScreen(entry.isIntersecting),
 			{
 				rootMargin: "0px",
+				threshold: 1.0
 			}
 		);
 	}, []);
@@ -445,7 +446,6 @@ const KeyFeaturesSection = ({ items, featureIndex, setSelectedTab }: {
 		}
 	}, [isOnScreen, setSelectedTab, featureIndex])
 
-	console.log(featureIndex);
 
 
 	return (
@@ -469,35 +469,27 @@ const KeyFeaturesSection = ({ items, featureIndex, setSelectedTab }: {
 
 export const AboutUsTabs = () => {
 	const [selectedTab, setSelectedTab] = useState(0)
-	const selectedItems = dummyAboutTabsData
-
-	let options = {
-		root: document.querySelector("#scrollArea"),
-		rootMargin: "0px",
-		threshold: 1.0,
-	};
-
-	// let observer = new IntersectionObserver(callback, options);
+	const selectedItems = dummyAboutTabsData[selectedTab]
 
 	return (
 		<div className='sm:px-10 px-3'>
 			<div className='md:block hidden '>
 				<div className='flex gap-16 xl:max-w-6xl mx-auto my-14 '>
-					<div className='w-1/5 '>
-						<div className=' border-paraGray/30 border-r space-y-11 sticky top-[300px]  '>
+					<div className='w-1/4 '>
+						<div className=' border-paraGray/10 border-r-4 space-y-11 sticky top-[300px]  '>
 							{dummyAboutTabs.map((tab, index) => (
-								<button
+								<div
 									key={index}
-									className={`w-full font-bold py-2 cursor-pointer border-r-4 ${selectedTab === index ? ' text-textHeader border-textHeader' : ' border-transparent text-paraGray/70'}`}
-									onClick={() => setSelectedTab(index)}
+									className={`w-full font-bold py-2 box-content border-r-4 ${selectedTab === index ? ' text-textHeader border-textHeader' : ' border-transparent text-paraGray/70'}`}
+									// onClick={() => setSelectedTab(index)}
 								>
 									{tab}
-								</button>
+								</div>
 							))}
 						</div>
 					</div>
 
-					<div className='w-4/5 space-y-32' >
+					<div className='w-3/4 space-y-32' >
 						{dummyAboutTabsData.map((items, index1) => (
 							<KeyFeaturesSection key={index1} items={items} featureIndex={index1} setSelectedTab={setSelectedTab} />
 						))
