@@ -30,11 +30,11 @@ const footerItems = [
 	],
 	[
 		{
-			title: 'Smart data',
-			link: '/solutions/smart-data',
+			title: 'Credit Scoring',
+			link: '/solutions/credit-scoring',
 		},
 		{
-			title: 'Fraud insights',
+			title: 'Fraud',
 			link: '/solutions/fraud-insights',
 		},
 	],
@@ -47,15 +47,19 @@ const footerItems = [
 			title: 'Developers',
 			link: '#'
 		},
+		{
+			title: 'Blog',
+			link: '#'
+		},
 	],
 	[
 		{
 			title: 'Linkedin',
-			link: 'linkedIn.com'
+			link: 'https://www.linkedin.com/company/fumiwo/'
 		},
 		{
 			title: 'Twitter',
-			link: 'twitter.com/fumiwo'
+			link: 'https://x.com/fumiwoio'
 		},
 		{
 			title: 'hello@fumiwo.io',

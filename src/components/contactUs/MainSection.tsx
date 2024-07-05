@@ -25,15 +25,22 @@ const MainSection = () => {
 	const [success, setSuccess] = useState('')
 
 
-	const onChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const onChangeValue = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+		setError('')
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
 		})
 	}
 
+
 	const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
+
+		if (Object.values(formData).includes('')) {
+			setError('Please fill in all fields. All fields are required')
+			return
+		}
 
 		const portalId = "143536254";
 		const formGuid = "67baae51-0580-4de1-91c7-1d0ae3b3bd85";
@@ -93,13 +100,13 @@ const MainSection = () => {
 					</P>
 
 					<Divider height={48} />
-					<div className='lg:flex gap-5  w-fit mx-auto lg:mx-0'>
+					<div className='lg:flex gap-8 items-center w-fit mx-auto lg:mx-0'>
 						<div className='  w-fit mx-auto lg:mx-0'>
-							<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="32" cy="32" r="32" fill="white" />
-								<path d="M43.2572 20.1484H21.9239C20.2875 20.1484 18.9609 21.4798 18.9609 23.1221V25.5011C18.9609 25.7188 19.0793 25.9191 19.2697 26.0233L32.3067 33.1602C32.4836 33.2571 32.6975 33.2571 32.8744 33.1602L45.9115 26.0233C46.1018 25.9191 46.2202 25.7188 46.2202 25.5011V23.1221C46.2202 21.4798 44.8936 20.1484 43.2572 20.1484Z" fill="#011D7B" />
-								<path d="M33.4421 34.649C32.912 34.9338 32.2715 34.9338 31.7414 34.649L18.9746 27.7812L18.9609 27.79V40.1237C18.9609 41.7379 20.2875 43.0464 21.9239 43.0464H43.2572C44.8936 43.0464 46.2202 41.7379 46.2202 40.1237V27.79L46.2066 27.7818L33.4421 34.649Z" fill="#011D7B" />
+							<svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M25.2572 0.148438H3.9239C2.2875 0.148437 0.960938 1.47981 0.960938 3.12215V5.50112C0.960897 5.71877 1.07932 5.91905 1.26968 6.0233L14.3067 13.1602C14.4836 13.2571 14.6975 13.2571 14.8744 13.1602L27.9115 6.0233C28.1018 5.91905 28.2202 5.71877 28.2202 5.50112V3.12215C28.2202 1.47981 26.8936 0.148438 25.2572 0.148438Z" fill="#011D7B" />
+								<path d="M15.4421 14.649C14.912 14.9338 14.2715 14.9338 13.7414 14.649L0.974567 7.78125L0.960938 7.79002V20.1237C0.960938 21.7379 2.2875 23.0464 3.9239 23.0464H25.2572C26.8936 23.0464 28.2202 21.7379 28.2202 20.1237V7.79002L28.2066 7.78183L15.4421 14.649Z" fill="#011D7B" />
 							</svg>
+
 						</div>
 						<div className=''>
 							<P>
@@ -187,11 +194,11 @@ const MainSection = () => {
 							<Divider height={16} />
 
 							<Input
-								name='message'
 								label='Message'
-								value={formData.message}
-								onChange={onChangeValue}
 								textareaProps={{
+									name: 'message',
+									value: formData.message,
+									onChange: onChangeValue,
 									rows: 4,
 									placeholder: 'Tell us about your project...'
 								}}

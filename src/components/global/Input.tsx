@@ -15,11 +15,11 @@ const Input = ({ label, textareaProps, ...props }: TInputProps) => {
 				{label}
 			</label>
 			<Divider height={6} />
-			<div className={`w-full py-3 px-4 border border-inputBorder rounded-md focus-within:outline focus-within:border-primaryGreen`}>
+			<div className={`w-full  border border-inputBorder rounded-md focus-within:outline focus-within:border-primaryGreen`}>
 				{textareaProps ? (
-					<textarea id={props.name} {...textareaProps} className={`border-none outline-none bg-white w-full  ${textareaProps.className}`} />
+					<textarea {...textareaProps} className={`py-3 px-4 border-none outline-none bg-white w-full  ${textareaProps.className}`} />
 				) : (
-					<input id={props.name} {...props} className={`border-none outline-none bg-white w-full ${props.className}`} />
+						<input id={props.name} {...props} className={`py-3 px-4 border-none outline-none bg-white w-full ${props.className}`} />
 				)
 				}
 			</div>

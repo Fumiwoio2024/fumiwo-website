@@ -8,7 +8,7 @@ import newWhyUs from '@images/new-why-us.png'
 
 const Metrics = ({ numbers, title }: { numbers: string, title: string }) => {
 	return (
-		<div className=''>
+		<div className='text-center'>
 			<P className='!text-primaryGreen !font-bold !text-5xl'>
 				{numbers}
 			</P>
@@ -50,7 +50,7 @@ const WhyUs = () => {
 					<div className='flex gap-16 overflow-x-auto no-scrollbar py-1'>
 						<Metrics numbers='+20%' title='Approval Rate' />
 						<Metrics numbers='-15%' title='Default Rate' />
-						<Metrics numbers='3s' title='Applicant Scoring' />
+						<Metrics numbers='3s' title='Average Response Time' />
 					</div>
 					<Divider height={48} />
 
