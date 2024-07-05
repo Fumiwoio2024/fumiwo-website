@@ -247,20 +247,20 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
 									{navLink.dropDownLink && (
 										<div className='-left-1/2 -translate-x-1/3 pt-5 absolute  top-6 '>
 											<div className={`flex gap-6 rounded-md min-w-[810px] bg-white shadow-optionShadow py-8 px-10 cursor-default ${toggleDropDownName === navLink.title ? 'block' : 'hidden'}`}>
-												<section className=' flex-1'>
+												<section className=' flex-1 items-center'>
 													<H5 className='!text-[28px]'>
 														{navLink.title}
 													</H5>
 													<Divider height={4} />
-													<P className='!text-base'>
+													<P className='!text-base text-justify'>
 														Explore Fumiwo’s range of powerful end-to-end solutions that resonate with your various business requirements.
 													</P>
 													<Divider height={18} />
-													<Image
+													{/* <Image
 														src={navLink.image as StaticImageData}
 														alt='dropdown image'
 														className='w-[164px] h-[129px]'
-													/>
+													/> */}
 												</section>
 												<section className='flex-1 space-y-7'>
 													{navLink.dropDownLink.map((item, index) => (

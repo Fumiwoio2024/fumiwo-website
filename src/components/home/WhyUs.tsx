@@ -48,9 +48,9 @@ const WhyUs = () => {
 					<Divider height={32} />
 
 					<div className='flex gap-16 overflow-x-auto no-scrollbar py-1'>
-						<Metrics numbers='+20%' title='Customer Rating' />
+						<Metrics numbers='+20%' title='Approval Rate' />
 						<Metrics numbers='-15%' title='Default Rate' />
-						<Metrics numbers='3x' title='Applicant Scoring' />
+						<Metrics numbers='3s' title='Applicant Scoring' />
 					</div>
 					<Divider height={48} />
 

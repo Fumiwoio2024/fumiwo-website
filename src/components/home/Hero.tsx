@@ -17,7 +17,7 @@ const Hero = () => {
 						using <span className='text-primaryGreen underline'>behavioral analytics</span>
 					</h2>
 					<h5 className='text-linkGray leading-8'>
-						Score confidently borrowers based on alternative smartphone data and unlock new market opportunities for your lending business
+						Score confidently borrowers based on alternative smartphone data and unlock new market opportunities for your lending business.
 					</h5>
 					<Divider height={16} />
 					<PrimaryButton className='mx-auto mxl:mx-0'>

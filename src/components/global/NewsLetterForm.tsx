@@ -79,7 +79,7 @@ const NewsLetterForm = () => {
 						className='bg-transparent border-none outline-none text-primaryBlack w-full h-full'
 					/>
 				</div>
-				<button className='h-full w-1/3 bg-primaryGreen'>
+				<button className='h-full w-1/3 bg-primaryGreen text-textHeader'>
 					Subscribe
 				</button>
 

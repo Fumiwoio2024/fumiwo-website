@@ -1,7 +1,7 @@
 'use client'
 import Image, { StaticImageData } from 'next/image'
 
-import React, { ReactNode, useState } from 'react'
+import React, { MutableRefObject, ReactNode, useEffect, useRef, useState } from 'react'
 import { H3, P } from './Typography'
 import Divider from './Divider'
 import { PrimaryButton } from './Buttons'
@@ -247,6 +247,7 @@ const dummyAboutTabs = [
 	'Security & Reliability'
 ]
 
+
 const dummyAboutTabsData = [
 	[
 		{
@@ -311,6 +312,22 @@ const dummyAboutTabsData = [
 		},
 		{
 			title: 'Data Export',
+			description: 'In addition to a concise documentation, our dedicated developer support is available round the clock.',
+			Icon: <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect width="72" height="72" rx="36" fill="#F4F5F7" />
+				<g clip-path="url(#clip0_1887_5670)">
+					<path d="M36 21.834C32.9942 21.834 30.1115 23.028 27.9861 25.1534C25.8607 27.2789 24.6667 30.1615 24.6667 33.1673V35.859C24.2393 36.2313 23.893 36.6876 23.6493 37.1993C23.4056 37.7111 23.2697 38.2675 23.25 38.834C23.2823 39.6554 23.5619 40.448 24.0523 41.1078C24.5428 41.7675 25.2211 42.2638 25.9983 42.5315C27.84 46.9373 31.5375 50.1673 36 50.1673H40.25V47.334H36C32.7983 47.334 29.8942 44.9256 28.435 41.1148L28.1375 40.3357L27.3017 40.2507C26.9613 40.2025 26.65 40.0323 26.4258 39.7716C26.2017 39.511 26.0799 39.1777 26.0833 38.834C26.0848 38.5868 26.151 38.3442 26.2753 38.1305C26.3995 37.9168 26.5776 37.7393 26.7917 37.6157L27.5 37.2048V34.584C27.5 34.2083 27.6493 33.8479 27.9149 33.5822C28.1806 33.3166 28.5409 33.1673 28.9167 33.1673H43.0833C43.4591 33.1673 43.8194 33.3166 44.0851 33.5822C44.3507 33.8479 44.5 34.2083 44.5 34.584V41.6673H38.7058C38.5772 41.3067 38.3536 40.9875 38.0585 40.7435C37.7634 40.4995 37.4079 40.3397 37.0295 40.2811C36.6512 40.2225 36.264 40.2672 35.9089 40.4105C35.5539 40.5539 35.2441 40.7904 35.0124 41.0953C34.7808 41.4001 34.6358 41.7619 34.5927 42.1424C34.5497 42.5228 34.6103 42.9078 34.7681 43.2567C34.9259 43.6056 35.175 43.9053 35.4891 44.1243C35.8032 44.3433 36.1706 44.4733 36.5525 44.5007H47.3333C48.0848 44.5007 48.8054 44.2021 49.3368 43.6708C49.8682 43.1394 50.1667 42.4188 50.1667 41.6673V38.834C50.1667 38.0825 49.8682 37.3619 49.3368 36.8305C48.8054 36.2992 48.0848 36.0007 47.3333 36.0007V33.1673C47.3333 30.1615 46.1393 27.2789 44.0139 25.1534C41.8885 23.028 39.0058 21.834 36 21.834Z" fill="#011D7B" />
+				</g>
+				<defs>
+					<clipPath id="clip0_1887_5670">
+						<rect width="34" height="34" fill="white" transform="translate(19 19)" />
+					</clipPath>
+				</defs>
+			</svg>
+
+		},
+		{
+			title: 'Developer Support',
 			description: 'Easy export of insights and reports for further analysis or integration with other decision-making tools.',
 			Icon: <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<rect width="72" height="72" rx="36" fill="#F4F5F7" />
@@ -383,16 +400,91 @@ const dummyAboutTabsData = [
 ]
 
 
+
+function useOnScreen(ref: MutableRefObject<HTMLDivElement | null>) {
+	const [isOnScreen, setIsOnScreen] = useState(false);
+	const observerRef = useRef<IntersectionObserver>(null);
+
+	useEffect(() => {
+		observerRef.current = new IntersectionObserver(([entry]) =>
+			setIsOnScreen(entry.isIntersecting),
+			{
+				rootMargin: "0px",
+			}
+		);
+	}, []);
+
+	useEffect(() => {
+
+		observerRef.current?.observe(ref.current!);
+
+		return () => {
+			observerRef.current?.disconnect();
+		};
+	}, [ref]);
+
+	return isOnScreen;
+}
+
+
+
+const KeyFeaturesSection = ({ items, featureIndex, setSelectedTab }: {
+	items: { title: string; description: string; Icon: JSX.Element }[];
+	featureIndex: number;
+	setSelectedTab: (index: number) => void
+}) => {
+
+	const elementRef = useRef(null);
+	const isOnScreen = useOnScreen(elementRef);
+
+	useEffect(() => {
+		isOnScreen &&
+			setSelectedTab(featureIndex)
+
+		return () => {
+		}
+	}, [isOnScreen, setSelectedTab, featureIndex])
+
+	console.log(featureIndex);
+
+
+	return (
+		<div ref={elementRef} className='grid md:grid-cols-2 grid-cols-1  gap-x-6 gap-y-10 '>
+			{items.map((item, index) => (
+				<div key={index} className='flex flex-col md:flex-row  gap-6'>
+					<div>
+						{item.Icon}
+					</div>
+					<div className='space-y-4'>
+						<h6 className='font-semibold text-2xl text-textHeader'>{item.title}</h6>
+						<P>{item.description}</P>
+					</div>
+				</div>
+			))}
+
+		</div>
+	)
+}
+
+
 export const AboutUsTabs = () => {
 	const [selectedTab, setSelectedTab] = useState(0)
-	const selectedItems = dummyAboutTabsData[selectedTab]
+	const selectedItems = dummyAboutTabsData
+
+	let options = {
+		root: document.querySelector("#scrollArea"),
+		rootMargin: "0px",
+		threshold: 1.0,
+	};
+
+	// let observer = new IntersectionObserver(callback, options);
 
 	return (
 		<div className='sm:px-10 px-3'>
 			<div className='md:block hidden '>
-				<div className='flex gap-16 xl:max-w-6xl mx-auto my-14 sticky top-[2200px]'>
+				<div className='flex gap-16 xl:max-w-6xl mx-auto my-14 '>
 					<div className='w-1/5 '>
-						<div className=' border-paraGray/30 border-r space-y-11'>
+						<div className=' border-paraGray/30 border-r space-y-11 sticky top-[300px]  '>
 							{dummyAboutTabs.map((tab, index) => (
 								<button
 									key={index}
@@ -405,20 +497,12 @@ export const AboutUsTabs = () => {
 						</div>
 					</div>
 
-					<div className='w-4/5  grid md:grid-cols-2 grid-cols-1  gap-x-8 gap-y-20'>
-						{
-							selectedItems.map((item, index) => (
-								<div key={index} className='flex flex-col md:flex-row  gap-6'>
-									<div>
-										{item.Icon}
-									</div>
-									<div key={index} className='space-y-4'>
-										<h6 className='font-semibold text-2xl text-textHeader'>{item.title}</h6>
-										<P>{item.description}</P>
-									</div>
-								</div>
-							))
+					<div className='w-4/5 space-y-32' >
+						{dummyAboutTabsData.map((items, index1) => (
+							<KeyFeaturesSection key={index1} items={items} featureIndex={index1} setSelectedTab={setSelectedTab} />
+						))
 						}
+
 					</div>
 				</div>
 

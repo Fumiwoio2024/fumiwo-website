@@ -18,9 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-scrollbar overflow-x-hidden">
-      <body className={inter.className + '  overflow-x-hidden'}>
+      <body className={inter.className}>
         {children}
-
         <ContactUs />
         <Footer />
       </body>
