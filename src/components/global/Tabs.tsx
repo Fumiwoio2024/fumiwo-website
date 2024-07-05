@@ -406,6 +406,7 @@ function useOnScreen(ref: MutableRefObject<HTMLDivElement | null>) {
 	const observerRef = useRef<IntersectionObserver>(null);
 
 	useEffect(() => {
+		// @ts-ignore
 		observerRef.current = new IntersectionObserver(([entry]) =>
 			setIsOnScreen(entry.isIntersecting),
 			{
