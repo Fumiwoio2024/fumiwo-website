@@ -5,10 +5,7 @@ import { H1, H5, P } from '../global/Typography'
 import Accordion from '../global/Accordion'
 
 const faqData = [
-	{
-		name: 'What Services Does Your Software Agency Offer?',
-		description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-	},
+
 	{
 		name: "Does Fumiwo collect personal data from the smartphone?",
 		description: "No. We only collect metadata that are anonymized. The collection of the data requires express consent of the borrower after the user has granted the access through its Operating System's permissions.",
