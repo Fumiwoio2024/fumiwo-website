@@ -47,24 +47,24 @@ const WhyUs = () => {
 					</P>
 					<Divider height={32} />
 
-					<div className='flex gap-16 overflow-x-auto no-scrollbar py-1'>
+					<div className='flex justify-between overflow-x-auto no-scrollbar py-2'>
 						<Metrics numbers='+20%' title='Approval Rate' />
 						<Metrics numbers='-15%' title='Default Rate' />
-						<Metrics numbers='3s' title='Average Response Time' />
+						<Metrics numbers='~0.2s' title='Avg Response Time' />
 					</div>
 					<Divider height={48} />
 
 					<PrimaryButton>
-						Learn More
+						Book a demo
 					</PrimaryButton>
 				</div>
 			</div>
 
-			<div className='w-fit hidden lg:block h-fit absolute bottom-10 right-0  '>
+			{/* <div className='w-fit hidden lg:block h-fit absolute bottom-10 right-0  '>
 				<svg width="48" height="63" viewBox="0 0 48 63" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M5.50764e-06 -3.8147e-06L0 63L48 31.4956L5.50764e-06 -3.8147e-06Z" fill="#12B74A" />
 				</svg>
-			</div>
+			</div> */}
 		</section>
 	)
 }
