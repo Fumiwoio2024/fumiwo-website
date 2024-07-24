@@ -8,7 +8,7 @@ type TTags = {
 
 const Tag = ({ children, className }: TTags) => {
 	return (
-		<p className={`bg-primaryGreen/35 text-textHeader font-semibold text-sm px-3 py-1 rounded-full w-fit capitalize ${className}`}>
+		<p className={`bg-primaryGreen/35 text-textHeader font-bold text-lg px-3 py-1 rounded-full w-fit uppercase ${className}`}>
 			{children}
 		</p>
 	)
