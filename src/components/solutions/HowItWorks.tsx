@@ -3,9 +3,8 @@ import { H4, P } from "../global/Typography";
 import Divider from "../global/Divider";
 import { PrimaryButton } from "../global/Buttons";
 import Link from "next/link";
-import Image from "next/image";
 
-const howItWorkItems = [
+const creditScoreHowItWorkItems = [
   {
     title: "SDK Integration",
     description:
@@ -28,14 +27,39 @@ const howItWorkItems = [
   },
 ];
 
+const fraudHowItWorkItems = [
+  {
+    title: "Data Collection",
+    description:
+      "Our SDK seamlessly integrates with your application, collecting data from various sources including details, user behavior, and device information.",
+  },
+  {
+    title: "Data Analysis",
+    description:
+      "The collected data is analyzed using our advanced machine learning algorithms to identify patterns and anomalies indicative of fraudulent activity.",
+  },
+  {
+    title: "Real-Time Alerts",
+    description:
+      "Receive instant alerts on suspected fraud, allowing you to take immediate action.",
+  },
+  {
+    title: "Comprehensive Reporting",
+    description:
+      "Access detailed reports and insights into fraud trends, helping you make informed decisions to strengthen your fraud prevention strategies.",
+  },
+];
+
 const SingleWork = ({
   title,
   description,
   index,
+  length,
 }: {
   title: string;
   description: string;
   index: number;
+  length: number;
 }) => {
   return (
     <>
@@ -47,12 +71,17 @@ const SingleWork = ({
           {description}
         </P>
       </div>
-      {index < howItWorkItems.length && <hr />}
+      {index < length && <hr />}
     </>
   );
 };
 
 const HowItWorks = ({ type }: { type: string }) => {
+  const isCreditScoring = type === "credit-risk-score";
+  const dataItems = isCreditScoring
+    ? creditScoreHowItWorkItems
+    : fraudHowItWorkItems;
+
   return (
     <div>
       <div className="mx-auto max-w-6xl px-5 pb-20 text-center lg:px-20 lg:text-left">
@@ -70,12 +99,13 @@ const HowItWorks = ({ type }: { type: string }) => {
         <Divider height={92} />
 
         <div>
-          {howItWorkItems.map((item, index) => (
+          {dataItems.map((item, index) => (
             <SingleWork
               key={index}
               title={item.title}
               description={item.description}
               index={index + 1}
+              length={dataItems.length}
             />
           ))}
         </div>

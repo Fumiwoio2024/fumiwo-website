@@ -52,20 +52,18 @@ const SolutionsHero = ({ type }: { type: string }) => {
         <div className="justify-betwee container mx-auto flex items-center gap-4 px-4 lg:pr-0">
           <div className="space-y-4 px-2 text-center md:px-0 xl:w-6/12 xl:pr-5 xl:text-left">
             <Tag className="mx-auto xl:mx-0">
-              {type === "credit-risk-score"
-                ? "Credit Scoring"
-                : "Fraud Insights"}
+              {isCreditScoring ? "Credit Scoring" : "Fraud Insights"}
             </Tag>
 
             <h2 className="mr-0 text-4xl font-bold leading-[57px] text-textHeader md:text-5xl md:leading-[78px] xl:mr-3">
               {isCreditScoring
                 ? "Assess risky applicants and their probability to default in real-time."
-                : "Leverage on smartphone metadata to get a more holistic view of your user's behavior."}
+                : "Detect potential fraudulent applicants with ease"}
             </h2>
             <h5 className="leading-8 text-paraGray">
               {isCreditScoring
-                ? "Assess risky applicants and their probability to default in real-time."
-                : "Leverage on smartphone metadata to get a more holistic view of your user's behavior."}
+                ? "Leverage on smartphone metadata to get a more holistic view of your user's behavior."
+                : "Leverage on our machine learning model to identify potentially fraudulent user behaviour, thereby minimizing risks."}
             </h5>
             <Divider height={16} />
             <div className="grid grid-cols-1 gap-4 xl:w-fit xl:grid-cols-2">

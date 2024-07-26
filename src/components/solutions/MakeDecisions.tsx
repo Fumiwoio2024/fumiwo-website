@@ -13,236 +13,200 @@ type TAdvantageFeatureItem = {
 
 const fraudAdvantageFeatureItems: TAdvantageFeatureItem[] = [
   {
-    title: "Enhanced Accuracy",
+    title: "Real-Time Detection",
     description:
-      "Smartphone metadata offers real-time insights into a user's financial activities and behaviors, enabling more precise credit assessments. This results in reduced default rates and better risk management for your institution",
+      "Identify and stop fraudulent activities as they happen with our real-time monitoring system.",
     icon: (
       <svg
-        width="80"
-        height="80"
-        viewBox="0 0 80 80"
+        width="76"
+        height="76"
+        viewBox="0 0 76 76"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g filter="url(#filter0_d_2562_7515)">
-          <rect x="4" y="2" width="72" height="72" rx="36" fill="#011D7B" />
-          <g clip-path="url(#clip0_2562_7515)">
-            <path
-              d="M47.1406 28H58.5692V39.4286"
-              stroke="white"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M58.5725 28L42.4297 44.1429C42.1626 44.4046 41.8036 44.5512 41.4297 44.5512C41.0558 44.5512 40.6967 44.4046 40.4297 44.1429L33.8583 37.5714C33.5912 37.3097 33.2322 37.1631 32.8583 37.1631C32.4843 37.1631 32.1253 37.3097 31.8583 37.5714L21.4297 48"
-              stroke="white"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
-        </g>
-        <defs>
-          <filter
-            id="filter0_d_2562_7515"
-            x="0"
-            y="0"
-            width="80"
-            height="80"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy="2" />
-            <feGaussianBlur stdDeviation="2" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_2562_7515"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect1_dropShadow_2562_7515"
-              result="shape"
-            />
-          </filter>
-          <clipPath id="clip0_2562_7515">
-            <rect
-              width="40"
-              height="40"
-              fill="white"
-              transform="translate(20 18)"
-            />
-          </clipPath>
-        </defs>
+        <rect width="76" height="76" rx="8" fill="#F0F5FF" />
+        <path
+          d="M38 54.125C30.14 54.125 23.75 47.735 23.75 39.875C23.75 32.015 30.14 25.625 38 25.625C45.86 25.625 52.25 32.015 52.25 39.875C52.25 40.49 51.74 41 51.125 41C50.51 41 50 40.49 50 39.875C50 33.26 44.615 27.875 38 27.875C31.385 27.875 26 33.26 26 39.875C26 46.49 31.385 51.875 38 51.875C38.615 51.875 39.125 52.385 39.125 53C39.125 53.615 38.615 54.125 38 54.125Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M38 40.625C37.385 40.625 36.875 40.115 36.875 39.5V32C36.875 31.385 37.385 30.875 38 30.875C38.615 30.875 39.125 31.385 39.125 32V39.5C39.125 40.115 38.615 40.625 38 40.625Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M42.5 24.125H33.5C32.885 24.125 32.375 23.615 32.375 23C32.375 22.385 32.885 21.875 33.5 21.875H42.5C43.115 21.875 43.625 22.385 43.625 23C43.625 23.615 43.115 24.125 42.5 24.125Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M48.5 52.625C47.885 52.625 47.375 52.115 47.375 51.5V45.5C47.375 44.885 47.885 44.375 48.5 44.375C49.115 44.375 49.625 44.885 49.625 45.5V51.5C49.625 52.115 49.115 52.625 48.5 52.625Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M44 52.625C43.385 52.625 42.875 52.115 42.875 51.5V45.5C42.875 44.885 43.385 44.375 44 44.375C44.615 44.375 45.125 44.885 45.125 45.5V51.5C45.125 52.115 44.615 52.625 44 52.625Z"
+          fill="#011D7B"
+        />
       </svg>
     ),
   },
   {
-    title: "Comprehensive data analytics",
+    title: "Behavioral Analysis",
     description:
-      "By analyzing patterns in communication, app usage, and location data, Fumiwo solution generate a more accurate and nuanced credit score that traditional models often miss.",
+      "Utilize sophisticated behavioral analytics to detect unusual patterns and anomalies that could indicate fraud.",
     icon: (
       <svg
-        width="80"
-        height="80"
-        viewBox="0 0 80 80"
+        width="76"
+        height="76"
+        viewBox="0 0 76 76"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g filter="url(#filter0_d_2562_7515)">
-          <rect x="4" y="2" width="72" height="72" rx="36" fill="#011D7B" />
-          <g clip-path="url(#clip0_2562_7515)">
-            <path
-              d="M47.1406 28H58.5692V39.4286"
-              stroke="white"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M58.5725 28L42.4297 44.1429C42.1626 44.4046 41.8036 44.5512 41.4297 44.5512C41.0558 44.5512 40.6967 44.4046 40.4297 44.1429L33.8583 37.5714C33.5912 37.3097 33.2322 37.1631 32.8583 37.1631C32.4843 37.1631 32.1253 37.3097 31.8583 37.5714L21.4297 48"
-              stroke="white"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
-        </g>
-        <defs>
-          <filter
-            id="filter0_d_2562_7515"
-            x="0"
-            y="0"
-            width="80"
-            height="80"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy="2" />
-            <feGaussianBlur stdDeviation="2" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_2562_7515"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect1_dropShadow_2562_7515"
-              result="shape"
-            />
-          </filter>
-          <clipPath id="clip0_2562_7515">
-            <rect
-              width="40"
-              height="40"
-              fill="white"
-              transform="translate(20 18)"
-            />
-          </clipPath>
-        </defs>
+        <rect width="76" height="76" rx="8" fill="#F0F5FF" />
+        <path
+          d="M37.1916 41.7191C34.2516 41.7191 31.8516 39.3191 31.8516 36.3791C31.8516 33.4391 34.2516 31.0391 37.1916 31.0391C40.1316 31.0391 42.5316 33.4391 42.5316 36.3791C42.5316 39.3191 40.1316 41.7191 37.1916 41.7191ZM37.1916 33.3041C35.4966 33.3041 34.1016 34.6841 34.1016 36.3941C34.1016 38.1041 35.4816 39.4841 37.1916 39.4841C38.9016 39.4841 40.2816 38.1041 40.2816 36.3941C40.2816 34.6841 38.9016 33.3041 37.1916 33.3041Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M44.9763 51.4232C44.3613 51.4232 43.8513 50.9132 43.8513 50.2982C43.8513 47.4182 40.8662 45.0781 37.1912 45.0781C33.5162 45.0781 30.5312 47.4182 30.5312 50.2982C30.5312 50.9132 30.0213 51.4232 29.4062 51.4232C28.7912 51.4232 28.2812 50.9132 28.2812 50.2982C28.2812 46.1882 32.2712 42.8281 37.1912 42.8281C42.1112 42.8281 46.1013 46.1732 46.1013 50.2982C46.1013 50.9132 45.5913 51.4232 44.9763 51.4232Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M37.25 54.125C28.775 54.125 21.875 47.225 21.875 38.75C21.875 30.275 28.775 23.375 37.25 23.375C39.335 23.375 41.345 23.78 43.235 24.575C43.775 24.8 44.045 25.4 43.865 25.955C43.7 26.45 43.625 26.975 43.625 27.5C43.625 28.385 43.865 29.255 44.33 30.005C44.57 30.425 44.885 30.8 45.245 31.115C46.55 32.3 48.485 32.675 50 32.135C50.555 31.925 51.185 32.21 51.41 32.765C52.22 34.67 52.625 36.695 52.625 38.765C52.625 47.225 45.725 54.125 37.25 54.125ZM37.25 25.625C30.02 25.625 24.125 31.505 24.125 38.75C24.125 45.995 30.02 51.875 37.25 51.875C44.48 51.875 50.375 45.995 50.375 38.75C50.375 37.31 50.135 35.885 49.685 34.52C47.615 34.88 45.35 34.235 43.76 32.78C43.235 32.33 42.77 31.775 42.41 31.16C41.75 30.08 41.39 28.805 41.39 27.5C41.39 27.095 41.42 26.705 41.495 26.315C40.13 25.85 38.705 25.625 37.25 25.625Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M49.4911 35C47.3817 35 45.3796 34.2127 43.8244 32.799C43.1987 32.2621 42.6446 31.6 42.2156 30.8663C41.429 29.5779 41 28.0568 41 26.5C41 25.5874 41.143 24.6926 41.429 23.8337C41.8223 22.6169 42.5016 21.4895 43.4132 20.5768C45.0221 18.9305 47.1851 18 49.5089 18C51.9401 18 54.2461 19.0379 55.8191 20.8274C57.2135 22.3842 58 24.3884 58 26.5C58 27.18 57.9106 27.86 57.7319 28.5042C57.5531 29.3095 57.2135 30.1505 56.7487 30.8842C55.7119 32.6379 54.0673 33.9442 52.1367 34.5526C51.3323 34.8568 50.4385 35 49.4911 35ZM49.4911 20.6842C47.9001 20.6842 46.4164 21.3105 45.326 22.4379C44.7003 23.0821 44.2534 23.8157 43.9853 24.6568C43.7886 25.2473 43.6993 25.8737 43.6993 26.5C43.6993 27.5558 43.9853 28.5937 44.5394 29.4884C44.8254 29.9894 45.2008 30.4368 45.6299 30.8126C47.1851 32.2263 49.4911 32.6737 51.2965 32.0295C52.6551 31.6 53.7634 30.7052 54.4784 29.5063C54.8002 28.9874 55.0147 28.4327 55.1399 27.8779C55.265 27.4127 55.3186 26.9653 55.3186 26.5C55.3186 25.0684 54.7823 23.6906 53.817 22.6169C52.7266 21.3821 51.1535 20.6842 49.4911 20.6842Z"
+          fill="#011D7B"
+        />
+        <path d="M46 30.209V28.9961" stroke="#011D7B" stroke-linecap="round" />
+        <path d="M49 30.2109V27.7852" stroke="#011D7B" stroke-linecap="round" />
+        <path
+          d="M51.9961 30.207V26.5625"
+          stroke="#011D7B"
+          stroke-linecap="round"
+        />
+        <path
+          d="M52 23L51.7305 23.3164C50.2363 25.0625 48.2324 26.2988 46 26.8555"
+          stroke="#011D7B"
+          stroke-linecap="round"
+        />
+        <path
+          d="M50.2812 23H51.998V24.7109"
+          stroke="#011D7B"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     ),
   },
   {
-    title: "Data privacy and Security",
+    title: "Machine Learning Algorithms",
     description:
       "Our solution complies with stringent data protection regulations, ensuring that all information is anonymized and encrypted, safeguarding your customers' trust and your organization's reputation.",
     icon: (
       <svg
-        width="80"
-        height="80"
-        viewBox="0 0 80 80"
+        width="76"
+        height="76"
+        viewBox="0 0 76 76"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g filter="url(#filter0_d_2562_7515)">
-          <rect x="4" y="2" width="72" height="72" rx="36" fill="#011D7B" />
-          <g clip-path="url(#clip0_2562_7515)">
-            <path
-              d="M47.1406 28H58.5692V39.4286"
-              stroke="white"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M58.5725 28L42.4297 44.1429C42.1626 44.4046 41.8036 44.5512 41.4297 44.5512C41.0558 44.5512 40.6967 44.4046 40.4297 44.1429L33.8583 37.5714C33.5912 37.3097 33.2322 37.1631 32.8583 37.1631C32.4843 37.1631 32.1253 37.3097 31.8583 37.5714L21.4297 48"
-              stroke="white"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </g>
-        </g>
-        <defs>
-          <filter
-            id="filter0_d_2562_7515"
-            x="0"
-            y="0"
-            width="80"
-            height="80"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy="2" />
-            <feGaussianBlur stdDeviation="2" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_2562_7515"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect1_dropShadow_2562_7515"
-              result="shape"
-            />
-          </filter>
-          <clipPath id="clip0_2562_7515">
-            <rect
-              width="40"
-              height="40"
-              fill="white"
-              transform="translate(20 18)"
-            />
-          </clipPath>
-        </defs>
+        <rect width="76" height="76" rx="8" fill="#F0F5FF" />
+        <path
+          d="M37.9992 40.6086C36.8292 40.6086 35.7192 40.1587 34.8642 39.3187C33.7692 38.2237 33.3342 36.6487 33.6942 35.1037C34.0692 33.5287 35.3292 32.2686 36.9042 31.8936C38.4342 31.5186 40.0092 31.9537 41.1192 33.0637C42.2292 34.1737 42.6492 35.7337 42.2892 37.2787C41.9142 38.8537 40.6542 40.1136 39.0792 40.4886C38.7192 40.5636 38.3592 40.6086 37.9992 40.6086ZM37.9992 34.0087C37.8192 34.0087 37.6242 34.0387 37.4442 34.0837C36.6942 34.2637 36.0792 34.8786 35.8992 35.6286C35.7042 36.4086 35.9142 37.1737 36.4692 37.7137C37.0242 38.2687 37.7742 38.4637 38.5692 38.2837C39.3192 38.1037 39.9342 37.4886 40.1142 36.7386C40.3092 35.9586 40.0992 35.1937 39.5442 34.6537C39.1242 34.2337 38.5842 34.0087 37.9992 34.0087Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M29.0314 46.955C28.7614 46.955 28.4764 46.85 28.2664 46.655C25.3564 43.955 23.6914 40.145 23.6914 36.185C23.6914 28.295 30.1114 21.875 38.0014 21.875C45.8914 21.875 52.3114 28.295 52.3114 36.185C52.3114 40.175 50.7064 43.865 47.7964 46.61C47.3464 47.03 46.6264 47.015 46.2064 46.565C45.7864 46.115 45.8014 45.395 46.2514 44.975C48.7114 42.665 50.0614 39.56 50.0614 36.2C50.0614 29.555 44.6464 24.14 38.0014 24.14C31.3564 24.14 25.9414 29.555 25.9414 36.2C25.9414 39.59 27.3064 42.71 29.7964 45.02C30.2464 45.44 30.2764 46.16 29.8564 46.61C29.6314 46.835 29.3314 46.955 29.0314 46.955Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M44.0012 42.9498C43.7312 42.9498 43.4463 42.8448 43.2363 42.6498C42.7863 42.2298 42.7563 41.5098 43.1913 41.0598C44.4363 39.7398 45.1262 37.9998 45.1262 36.1998C45.1262 32.2698 41.9312 29.0898 38.0162 29.0898C34.1012 29.0898 30.9062 32.2848 30.9062 36.1998C30.9062 38.0148 31.5962 39.7398 32.8412 41.0598C33.2612 41.5098 33.2462 42.2298 32.7962 42.6498C32.3462 43.0698 31.6262 43.0549 31.2062 42.6049C29.5712 40.8649 28.6562 38.5848 28.6562 36.1998C28.6562 31.0398 32.8562 26.8398 38.0162 26.8398C43.1762 26.8398 47.3762 31.0398 47.3762 36.1998C47.3762 38.5848 46.4762 40.8649 44.8262 42.6049C44.6012 42.8299 44.3012 42.9498 44.0012 42.9498Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M40.1615 54.1235H35.8565C34.1465 54.1235 32.6315 53.1635 31.8965 51.6335C31.1615 50.1035 31.3565 48.3185 32.4215 46.9835L34.5815 44.2985C35.4215 43.2485 36.6665 42.6484 38.0165 42.6484C39.3665 42.6484 40.6115 43.2485 41.4515 44.2985L43.6115 46.9835C44.6765 48.3185 44.8865 50.1035 44.1365 51.6335C43.3715 53.1635 41.8565 54.1235 40.1615 54.1235ZM36.3215 45.6935L34.1615 48.3784C33.6365 49.0384 33.5315 49.8935 33.9065 50.6435C34.2665 51.4085 35.0015 51.8585 35.8415 51.8585H40.1465C40.9865 51.8585 41.7215 51.4085 42.0815 50.6435C42.4415 49.8785 42.3515 49.0384 41.8265 48.3784L39.6665 45.6935C38.8565 44.6735 37.1465 44.6735 36.3215 45.6935Z"
+          fill="#011D7B"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Customizable Rules",
+    description:
+      "Tailor the fraud detection rules to fit your business needs and risk appetite, ensuring maximum protection without disrupting legitimate transactions.",
+    icon: (
+      <svg
+        width="76"
+        height="76"
+        viewBox="0 0 76 76"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="76" height="76" rx="8" fill="#F0F5FF" />
+        <path
+          d="M50.015 48.89C49.73 48.89 49.445 48.785 49.22 48.56L41.795 41.135C41.36 40.7 41.36 39.98 41.795 39.545C42.23 39.11 42.95 39.11 43.385 39.545L50.81 46.97C51.245 47.405 51.245 48.125 50.81 48.56C50.585 48.785 50.3 48.89 50.015 48.89Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M35.1652 47.6445C34.0702 47.6445 33.0202 47.2095 32.2552 46.4295L25.8952 40.0695C24.2902 38.4645 24.2902 35.8395 25.8952 34.2345L36.5002 23.6295C38.1052 22.0245 40.7302 22.0245 42.3352 23.6295L48.6952 29.9895C49.4752 30.7695 49.9102 31.8045 49.9102 32.8995C49.9102 33.9945 49.4752 35.0445 48.6952 35.8095L38.0902 46.4145C37.3102 47.2245 36.2752 47.6445 35.1652 47.6445ZM39.4102 24.6795C38.9302 24.6795 38.4502 24.8595 38.0902 25.2345L27.4852 35.8395C26.7502 36.5745 26.7502 37.7595 27.4852 38.4945L33.8452 44.8545C34.5502 45.5595 35.7802 45.5595 36.5002 44.8545L47.1052 34.2495C47.4652 33.8895 47.6602 33.4245 47.6602 32.9295C47.6602 32.4345 47.4652 31.9545 47.1052 31.6095L40.7452 25.2495C40.3702 24.8595 39.8902 24.6795 39.4102 24.6795Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M32 52.625H23C22.385 52.625 21.875 52.115 21.875 51.5C21.875 50.885 22.385 50.375 23 50.375H32C32.615 50.375 33.125 50.885 33.125 51.5C33.125 52.115 32.615 52.625 32 52.625Z"
+          fill="#011D7B"
+        />
+        <path
+          d="M40.445 43.609C40.16 43.609 39.875 43.504 39.65 43.279L29.045 32.6741C28.61 32.2391 28.61 31.5191 29.045 31.0841C29.48 30.6491 30.2 30.6491 30.635 31.0841L41.24 41.689C41.675 42.124 41.675 42.844 41.24 43.279C41.03 43.504 40.73 43.609 40.445 43.609Z"
+          fill="#011D7B"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Comprehensive Reporting",
+    description:
+      "Receive detailed reports on fraudulent activities, helping you understand and mitigate risks effectively.",
+    icon: (
+      <svg
+        width="76"
+        height="76"
+        viewBox="0 0 76 76"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="76" height="76" rx="8" fill="#F0F5FF" />
+        <path
+          d="M32 38.3008H42.5"
+          stroke="#011D7B"
+          stroke-width="2"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M32 44.3008H38.57"
+          stroke="#011D7B"
+          stroke-width="2"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M35 29H41C44 29 44 27.5 44 26C44 23 42.5 23 41 23H35C33.5 23 32 23 32 26C32 29 33.5 29 35 29Z"
+          stroke="#011D7B"
+          stroke-width="2"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M44 26.0312C48.995 26.3013 51.5 28.1462 51.5 35.0013V44.0012C51.5 50.0012 50 53.0012 42.5 53.0012H33.5C26 53.0012 24.5 50.0012 24.5 44.0012V35.0013C24.5 28.1613 27.005 26.3013 32 26.0312"
+          stroke="#011D7B"
+          stroke-width="2"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     ),
   },
@@ -528,13 +492,7 @@ const MakeDecisions = ({ type }: { type: string }) => {
     <section className="container mx-auto px-6 pb-32 text-center">
       <div className="mx-auto max-w-xl text-center">
         <H4 className="mx-auto max-w-xl md:!leading-[72px]">
-          {isCreditScoring ? (
-            <>
-              Key <span className="text-primaryGreen">features</span>
-            </>
-          ) : (
-            "Make decisions with less effort"
-          )}
+          Key <span className="text-primaryGreen">features</span>
         </H4>
         <Divider height={16} />
         <P className="">
