@@ -2,7 +2,7 @@ import React from "react";
 import { H4, P } from "../global/Typography";
 import Divider from "../global/Divider";
 import Image from "next/image";
-import partners from "@images/partners.png";
+import partners from "@images/partners-home.png";
 
 const SolutionMetrics = ({
   numbers,

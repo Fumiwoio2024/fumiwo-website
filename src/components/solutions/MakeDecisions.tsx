@@ -101,7 +101,7 @@ const fraudAdvantageFeatureItems: TAdvantageFeatureItem[] = [
   {
     title: "Machine Learning Algorithms",
     description:
-      "Our solution complies with stringent data protection regulations, ensuring that all information is anonymized and encrypted, safeguarding your customers' trust and your organization's reputation.",
+      "Leverage the power of machine learning to continuously improve fraud detection accuracy and adapt to new fraud tactics.",
     icon: (
       <svg
         width="76"
@@ -470,13 +470,13 @@ const AdvantageFeatures2 = ({
   icon,
 }: TAdvantageFeatureItem) => {
   return (
-    <div className="h-[352px flex max-w-sm flex-col items-center justify-center gap-12 rounded-[18px] border p-6">
+    <div className="flex min-h-[352px] max-w-sm flex-col items-center rounded-[18px] border p-8">
       <div>{icon}</div>
-
+      <Divider height={28} />
       <h3 className="text-lg font-semibold text-textHeader md:text-xl">
         {title}
       </h3>
-
+      <Divider height={12} />
       <P className="text-center !text-base">{description}</P>
     </div>
   );
@@ -501,10 +501,10 @@ const MakeDecisions = ({ type }: { type: string }) => {
           repay.
         </P>
       </div>
-      <Divider height={132} />
+      <Divider height={60} />
 
       {/* <div className='grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 justify-center items-center content-center justify-items-center'> */}
-      <div className="md: flex flex-wrap items-center justify-center gap-6">
+      <div className="md: flex flex-wrap justify-center gap-6">
         {dataItems.map((item) => (
           <AdvantageFeatures2
             key={item.title}

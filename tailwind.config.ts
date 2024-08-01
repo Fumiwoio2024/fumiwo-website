@@ -32,7 +32,8 @@ const config: Config = {
         buttonTextBlue: '#011556',
         inputLabel: '#061C3D',
         inputBorder: '#E6E8EC',
-        bottomFooterBorder: '#8A8A8A'
+        bottomFooterBorder: '#8A8A8A',
+        iconBg: '#F0F5FF',
       },
       boxShadow: {
         formShadow: '0px 16px 72px 0px #061C3D14',

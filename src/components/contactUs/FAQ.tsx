@@ -53,30 +53,27 @@ const FAQ = () => {
 	const [selected, setSelected] = useState('')
 
 	return (
-		<section className='grid lg:flex max-w-6xl mx-auto pb-36 mt-28 px-6'>
-			<div className=' flex-1 mb-10 lg:mb-0 text-center lg:text-left'>
-				<H1 className=' lg:w-80 !leading-[58px]'>
-					Frequently Asked  Questions
-				</H1>
-			</div>
+    <section className="mx-auto mt-28 grid max-w-6xl px-6 pb-36 lg:flex">
+      <div className="mb-10 flex-1 text-center lg:mb-0 lg:text-left">
+        <H1 className="!leading-[58px] lg:w-80">
+          Frequently Asked <span className="text-primaryGreen">Questions</span>
+        </H1>
+      </div>
 
-
-			<div className='flex-1'>
-				{faqData.map((item, index) => (
-					<Accordion
-						key={index}
-						name={item.name}
-						selected={selected}
-						setSelected={setSelected}
-					>
-						<P className='!text-sm md:!text-sm mt-5'>
-							{item.description}
-						</P>
-					</Accordion>
-				))}
-			</div>
-		</section>
-	)
+      <div className="flex-1">
+        {faqData.map((item, index) => (
+          <Accordion
+            key={index}
+            name={item.name}
+            selected={selected}
+            setSelected={setSelected}
+          >
+            <P className="mt-5 !text-sm md:!text-base">{item.description}</P>
+          </Accordion>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default FAQ

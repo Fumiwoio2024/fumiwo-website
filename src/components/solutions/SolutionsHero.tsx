@@ -1,11 +1,14 @@
-import Image from 'next/image'
-import React from 'react'
-import { PrimaryButton, SecondaryButton } from '../global/Buttons'
-import Divider from '../global/Divider'
-import newSolutionsHero from "@images/new-solutions-hero.png";
-import fraudInsightsHero from "@images/fraud-insight-hero.png";
+import Image from "next/image";
+import React from "react";
+import { PrimaryButton, SecondaryButton } from "../global/Buttons";
+import Divider from "../global/Divider";
+// import newSolutionsHero from "@images/new-solutions-hero.png";
+// import fraudInsightsHero from "@images/fraud-insight-hero.png";
+import fraudInsightsHero from "@images/home-fraud.png";
+import newSolutionsHero from "@images/home-credit.png";
 import Tag from "../global/Tag";
 import { P } from "../global/Typography";
+import Link from "next/link";
 
 const SolutionsHero = ({ type }: { type: string }) => {
   const isCreditScoring = type === "credit-risk-score";
@@ -48,11 +51,11 @@ const SolutionsHero = ({ type }: { type: string }) => {
 				<Divider height={40} />
 			</section> */}
 
-      <section className="overflow-hidden py-5 text-primaryBlack md:py-14">
+      <section className="overflow-hidden pt-5 text-primaryBlack md:pt-10">
         <div className="justify-betwee container mx-auto flex items-center gap-4 px-4 lg:pr-0">
           <div className="space-y-4 px-2 text-center md:px-0 xl:w-6/12 xl:pr-5 xl:text-left">
             <Tag className="mx-auto xl:mx-0">
-              {isCreditScoring ? "Credit Scoring" : "Fraud Insights"}
+              {isCreditScoring ? "Credit Scoring" : "Fraud"}
             </Tag>
 
             <h2 className="mr-0 text-4xl font-bold leading-[57px] text-textHeader md:text-5xl md:leading-[78px] xl:mr-3">
@@ -67,12 +70,20 @@ const SolutionsHero = ({ type }: { type: string }) => {
             </h5>
             <Divider height={16} />
             <div className="grid grid-cols-1 gap-4 xl:w-fit xl:grid-cols-2">
-              <PrimaryButton className="mxl:mx-0 mx-auto">
-                Book a demo
-              </PrimaryButton>
-              <SecondaryButton className="mx-auto xl:mx-0">
-                Contact sales
-              </SecondaryButton>
+              <Link
+                href="https://calendly.com/hello-fumiwo/demo"
+                className="mx-auto block xl:mx-0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <PrimaryButton className="">Book a demo</PrimaryButton>
+              </Link>
+              <Link
+                href="mailto:hello@fumiwo.io"
+                className="mx-auto block xl:mx-0"
+              >
+                <SecondaryButton className="">Contact sales</SecondaryButton>
+              </Link>
             </div>
           </div>
           <div className="hidden xl:flex xl:w-6/12">
@@ -83,11 +94,10 @@ const SolutionsHero = ({ type }: { type: string }) => {
             />
           </div>
         </div>
-
-        <Divider height={40} />
       </section>
+      <Divider height={107} />
     </>
   );
 };
 
-export default SolutionsHero
+export default SolutionsHero;

@@ -63,7 +63,7 @@ const SingleWork = ({
 }) => {
   return (
     <>
-      <div className="space-y-4 py-10 lg:flex lg:space-y-0">
+      <div className="space-y-4 py-10 pr-5 lg:flex lg:space-y-0">
         <h6 className="text-[28px] font-bold text-textHeader lg:w-2/5">
           0{index}. {title}
         </h6>
@@ -71,7 +71,7 @@ const SingleWork = ({
           {description}
         </P>
       </div>
-      {index < length && <hr />}
+      {index < length && <hr className="ml-auto w-11/12" />}
     </>
   );
 };
