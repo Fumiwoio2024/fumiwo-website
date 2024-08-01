@@ -35,57 +35,61 @@ const MainSection = () => {
 
 
 	const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
+    e.preventDefault();
+    console.log(formData);
 
-		if (Object.values(formData).includes('')) {
-			setError('Please fill in all fields. All fields are required')
-			return
-		}
+    if (Object.values(formData).includes("")) {
+      setError("Please fill in all fields. All fields are required");
+      return;
+    }
 
-		const portalId = "143536254";
-		const formGuid = "67baae51-0580-4de1-91c7-1d0ae3b3bd85";
-		const config = {
-			headers: {
-				'Content-Type': 'application/json',
-			}
-		}
-		const name = formData.name.split(" ")
+    const portalId = "143536254";
+    const formGuid = "67baae51-0580-4de1-91c7-1d0ae3b3bd85";
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const name = formData.name.split(" ");
 
-		const response = await axios.post(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`,
-			{
-				portalId,
-				formGuid,
-				fields: [
-					{
-						name: 'firstname',
-						value: name[0],
-					},
-					{
-						name: 'email',
-						value: formData.email,
-					},
-					{
-						name: 'lastname',
-						value: name[1],
-					},
-					{
-						name: 'message',
-						value: `${formData.subject}: ${formData.message}`,
-					},
-				],
-			},
-			config
-		);
-		response;
-		if (response.status === 200) {
-			setFormData(defaultValues)
-			setSuccess(response.data?.inlineMessage || 'Thank you for contacting us!')
-		} else {
-			setError(response.data?.message || 'An error occurred, please try again')
-		}
-	}
+    const response = await axios.post(
+      `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`,
+      {
+        portalId,
+        formGuid,
+        fields: [
+          {
+            name: "firstname",
+            value: name[0],
+          },
+          {
+            name: "email",
+            value: formData.email,
+          },
+          {
+            name: "lastname",
+            value: name[1],
+          },
+          {
+            name: "message",
+            value: `${formData.subject}: ${formData.message}`,
+          },
+        ],
+      },
+      config,
+    );
+    response;
+    if (response.status === 200) {
+      setFormData(defaultValues);
+      setSuccess(
+        response.data?.inlineMessage || "Thank you for contacting us!",
+      );
+    } else {
+      setError(response.data?.message || "An error occurred, please try again");
+    }
+  };
 
-	return (
+  return (
     <section className="px-6">
       <div className="mx-auto grid max-w-6xl grid-cols-1 justify-between gap-20 pt-14 lg:grid-cols-2">
         <div className="text-center lg:w-11/12 lg:text-left">
@@ -223,6 +227,7 @@ const MainSection = () => {
             <form onSubmit={submitHandler}>
               <div className="gap-4 lg:flex">
                 <Input
+                  required
                   name="name"
                   label="Name"
                   placeholder="Full name"
@@ -231,6 +236,8 @@ const MainSection = () => {
                 />
                 <Divider height={16} className="lg:hidden" />
                 <Input
+                  required
+                  type="email"
                   name="email"
                   label="Email"
                   placeholder="Email address"
@@ -241,15 +248,22 @@ const MainSection = () => {
               <Divider height={16} />
 
               <Input
+                required
                 name="phone"
                 label="Phone"
                 placeholder="Phone number"
                 value={formData.phone}
-                onChange={onChangeValue}
+                minLength={11}
+                onChange={(e) => {
+                  if (isNaN(Number(e.target.value))) return;
+
+                  onChangeValue(e);
+                }}
               />
               <Divider height={16} />
 
               <Input
+                required
                 name="subject"
                 label="Subjects"
                 placeholder="What is it about?"
@@ -259,6 +273,7 @@ const MainSection = () => {
               <Divider height={16} />
 
               <Input
+                required
                 label="Message"
                 textareaProps={{
                   name: "message",
