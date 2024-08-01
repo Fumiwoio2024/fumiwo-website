@@ -8,7 +8,7 @@ import newStory from '@images/new-story.png'
 
 const Story = () => {
 	return (
-    <section className="bg-white px-6 py-16 text-center">
+    <section className="text-cente bg-white px-6 py-16">
       <div className="max-w-4xl md:mx-auto">
         <H4>
           Our <span className="text-primaryGreen">story</span>
@@ -31,7 +31,7 @@ const Story = () => {
       <Divider className="h-20 md:h-32" />
 
       <div className="mx-auto max-w-5xl gap-16 text-left md:flex">
-        <H4 className="text-justify md:w-[55%] md:!leading-[72px]">
+        <H4 className="md:w-[55%] md:!leading-[72px] lg:text-justify">
           We exist to help you make{" "}
           <span className="text-primaryGreen">better credit decisions</span> and
           reduce defaults
@@ -50,7 +50,7 @@ const Story = () => {
           </P>
         </div>
       </div>
-      <Divider height={64} />
+      <Divider className="hidden lg:block" height={64} />
     </section>
   );
 }

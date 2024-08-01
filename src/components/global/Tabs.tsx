@@ -23,8 +23,7 @@ const tabItemData = [
     title: "Credit scoring",
     Icon: (
       <svg
-        width="49"
-        height="48"
+        className="h-7 w-7 md:h-12 md:w-12"
         viewBox="0 0 49 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -111,8 +110,7 @@ const tabItemData = [
     image: newFraud,
     Icon: (
       <svg
-        width="49"
-        height="48"
+        className="h-7 w-7 md:h-12 md:w-12"
         viewBox="0 0 49 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +207,7 @@ const HomeTabs = ({ tabs = tabItemData }) => {
           {tabs.map((tab, index) => (
             <button
               key={index}
-              className={`flex cursor-pointer items-center gap-3 rounded-[20px] border-2 px-7 py-4 font-bold transition duration-300 active:bg-primaryGreen/20 ${selectedTab === index ? "border-primaryGreen text-textHeader" : "text-bottomFooterBorder"}`}
+              className={`flex cursor-pointer items-center gap-3 rounded-[20px] border-2 px-3.5 py-3 font-bold transition duration-300 active:bg-primaryGreen/20 md:px-7 md:py-4 ${selectedTab === index ? "border-primaryGreen text-textHeader" : "text-bottomFooterBorder"}`}
               onClick={() => setSelectedTab(index)}
             >
               {tab.Icon}

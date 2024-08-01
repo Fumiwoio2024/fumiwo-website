@@ -366,7 +366,7 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
               ))}
             </ul>
 
-            <Link href="/contact-us" className='className="hidden lg:block"'>
+            <Link href="/contact-us" className="hidden lg:block">
               <PrimaryButton>Contact Us</PrimaryButton>
             </Link>
             <button onClick={toggleSideBar} className="md:hidden">
