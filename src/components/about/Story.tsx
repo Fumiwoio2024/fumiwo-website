@@ -36,7 +36,7 @@ const Story = () => {
           <span className="text-primaryGreen">better credit decisions</span> and
           reduce defaults
         </H4>
-        <div className="md:w-[45%]">
+        <div className="mt-3.5 md:mt-0 md:w-[45%]">
           <P>
             In today&apos;s rapidly evolving financial landscape, making
             informed and accurate credit decisions is more critical than ever.
