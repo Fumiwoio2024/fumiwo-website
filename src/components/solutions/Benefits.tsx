@@ -257,15 +257,15 @@ const SingleBenefit = ({
   items: { title: string; description: string; Icon: JSX.Element }[];
 }) => {
   return (
-    <div className="mt-14 space-y-12">
+    <div className="mt-14 space-y-12 px-6 md:px-0">
       {items.map((item, index) => (
-        <div key={index} className="flex flex-col gap-6 lg:flex-row">
-          <div className="mx-auto">{item.Icon}</div>
+        <div key={index} className="flex gap-6">
+          <div>{item.Icon}</div>
           <div className="space-y-4">
             <h6 className="text-2xl font-semibold text-primaryGreen">
               {item.title}
             </h6>
-            <P className="!text-base !font-normal !text-white">
+            <P className="!text-base !font-normal !text-white/70">
               {item.description}
             </P>
           </div>
@@ -281,7 +281,7 @@ const Benefits = ({ type }: { type: string }) => {
     ? creditScoreBenefitItems
     : fraudBenefitItems;
   return (
-    <section className="relative mb-24 bg-primaryBlack px-6 py-20 text-center lg:mb-44 lg:py-28">
+    <section className="relative mb-14 bg-primaryBlack pt-20 lg:mb-24 lg:py-28 lg:text-center">
       {/* <div className='w-fit hidden lg:block h-fit absolute top-0 left-0  '>
 				<svg width="100" height="95" viewBox="0 0 100 95" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M0.00110788 0.218966L100.001 -0.000102199C100.115 51.9179 55.4389 94.0978 0.207031 94.2188L0.00110788 0.218966Z" fill="#0BE781" />
@@ -289,9 +289,9 @@ const Benefits = ({ type }: { type: string }) => {
 
 			</div> */}
 
-      <div className="text-cen container mx-auto items-center gap-32 space-y-20 xl:flex xl:space-y-0 xl:text-left">
+      <div className="container mx-auto items-center gap-32 space-y-20 xl:flex xl:space-y-0 xl:text-left">
         <div className="lg:flex-1">
-          <H4 className="!text-offWhite">
+          <H4 className="text-center !text-offWhite">
             <span className="text-primaryGreen">Benefits</span> of our solution
           </H4>
           <Divider height={12} />

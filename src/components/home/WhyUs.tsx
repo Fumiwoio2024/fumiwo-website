@@ -1,25 +1,29 @@
-import React from 'react'
-import { H4, P } from '../global/Typography'
-import Divider from '../global/Divider'
-import { PrimaryButton } from '../global/Buttons'
-import Image from 'next/image'
-import whyUs from '@images/whyUs.png'
-import newWhyUs from '@images/new-why-us.png'
+import React from "react";
+import { H4, P } from "../global/Typography";
+import Divider from "../global/Divider";
+import { PrimaryButton } from "../global/Buttons";
+import Image from "next/image";
+import whyUs from "@images/whyUs.png";
+import newWhyUs from "@images/new-why-us.png";
 import Link from "next/link";
 
 const Metrics = ({ numbers, title }: { numbers: string; title: string }) => {
   return (
     <div className="text-center">
-      <P className="!text-5xl !font-bold !text-primaryGreen">{numbers}</P>
+      <P className="text-[28px] !font-bold !text-primaryGreen md:!text-5xl">
+        {numbers}
+      </P>
       <Divider height={14} />
-      <P className="!text-base !font-normal !text-offWhite">{title}</P>
+      <P className="text-xs !font-normal !text-offWhite md:!text-base">
+        {title}
+      </P>
     </div>
   );
 };
 
 const WhyUs = () => {
   return (
-    <section className="relative mb-20 bg-primaryBlack px-6 py-20 text-center md:py-28 lg:mb-32">
+    <section className="relative mb-20 bg-primaryBlack px-6 py-12 text-center md:py-28 lg:mb-32">
       {/* <div className='w-fit hidden lg:block h-fit absolute top-0 left-0  '>
 				<svg width="100" height="95" viewBox="0 0 100 95" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M0.00110788 0.218966L100.001 -0.000102199C100.115 51.9179 55.4389 94.0978 0.207031 94.2188L0.00110788 0.218966Z" fill="#0BE781" />
@@ -27,12 +31,7 @@ const WhyUs = () => {
 
 			</div> */}
 
-      <div className="mx-auto max-w-6xl items-center gap-20 space-y-20 text-center md:flex md:space-y-0 lg:text-left">
-        <Image
-          src={newWhyUs}
-          alt="people typing on laptop"
-          className="md:w-6/12"
-        />
+      <div className="mx-auto max-w-6xl items-center gap-20 space-y-20 text-center md:flex md:flex-row-reverse md:space-y-0 lg:text-left">
         <div className="md:w-6/12">
           <H4 className="!text-offWhite">Why Choose Us</H4>
           <Divider height={12} />
@@ -56,6 +55,12 @@ const WhyUs = () => {
             <PrimaryButton>Learn More</PrimaryButton>
           </Link>
         </div>
+
+        <Image
+          src={newWhyUs}
+          alt="people typing on laptop"
+          className="md:w-6/12"
+        />
       </div>
 
       {/* <div className='w-fit hidden lg:block h-fit absolute bottom-10 right-0  '>
@@ -67,4 +72,4 @@ const WhyUs = () => {
   );
 };
 
-export default WhyUs
+export default WhyUs;

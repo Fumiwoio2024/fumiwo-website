@@ -57,7 +57,7 @@ const ClientFeedback = () => {
             </button>
           </div>
         </div>
-        <div className="relative space-y-[14px] rounded-2xl border-[6px] border-primaryGreen p-4 md:w-3/5 lg:space-y-8 lg:border-8 lg:p-12">
+        <div className="relative space-y-[14px] rounded-2xl border-[6px] border-primaryGreen p-5 pb-8 md:w-3/5 lg:space-y-8 lg:border-8 lg:p-12">
           {/* stars */}
           <div className="flex gap-2">
             {[...Array(5)].map((_, index) => (

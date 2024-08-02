@@ -489,8 +489,8 @@ const MakeDecisions = ({ type }: { type: string }) => {
     : fraudAdvantageFeatureItems;
 
   return (
-    <section className="container mx-auto px-6 pb-32 text-center">
-      <div className="mx-auto max-w-xl text-center">
+    <section className="container mx-auto px-6 pb-32 md:text-center">
+      <div className="mx-auto max-w-xl">
         <H4 className="mx-auto max-w-xl md:!leading-[72px]">
           Key <span className="text-primaryGreen">features</span>
         </H4>

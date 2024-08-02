@@ -64,14 +64,14 @@ const SingleWork = ({
   return (
     <>
       <div className="space-y-4 py-10 pr-5 lg:flex lg:space-y-0">
-        <h6 className="text-[28px] font-bold text-textHeader lg:w-2/5">
+        <h6 className="text-xl font-bold text-textHeader lg:w-2/5 lg:text-[28px]">
           0{index}. {title}
         </h6>
-        <P className="text-normal text-lg leading-10 !text-paraGray lg:w-3/5">
+        <P className="text-sm font-normal leading-10 !text-paraGray/70 lg:w-3/5 lg:text-lg">
           {description}
         </P>
       </div>
-      {index < length && <hr className="ml-auto w-11/12" />}
+      {index < length && <hr className="lg:ml-auto lg:w-11/12" />}
     </>
   );
 };
@@ -84,19 +84,19 @@ const HowItWorks = ({ type }: { type: string }) => {
 
   return (
     <div>
-      <div className="mx-auto max-w-6xl px-5 pb-20 text-center lg:px-20 lg:text-left">
+      <div className="mx-auto max-w-6xl px-5 lg:px-20">
         <div className="lg:w-3/4">
-          <H4 className="!text-textHeader">
+          <H4 className="text-[28px] !text-textHeader">
             How it <span className="text-primaryGreen">works</span>
           </H4>
-          <Divider height={24} />
-          <P className="text-normal text-lg leading-10 !text-paraGray">
+          <Divider className="h-3.5 lg:h-6" />
+          <P className="text-normal text-sm leading-6 !text-paraGray/70">
             Our cutting-edge credit scoring solution enable you assess your
             borrowers behavior in real time and determine their willingness to
             repay.
           </P>
         </div>
-        <Divider height={92} />
+        <Divider className="h-0 lg:h-24" />
 
         <div>
           {dataItems.map((item, index) => (
@@ -110,11 +110,11 @@ const HowItWorks = ({ type }: { type: string }) => {
           ))}
         </div>
 
-        <Divider height={54} />
-        <Link href="/contact-us" className="mx-auto block w-fit">
+        <Divider className="h-8 lg:h-14" />
+        <Link href="/contact-us" className="">
           <PrimaryButton>Contact us</PrimaryButton>
         </Link>
-        <Divider height={102} />
+        <Divider className="h-20 lg:h-24" />
       </div>
     </div>
   );
