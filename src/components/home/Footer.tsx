@@ -38,10 +38,10 @@ const footerItems = [
     // 	title: 'Blog',
     // 	link: '/'
     // },
-    {
-      title: "Developers",
-      link: "#",
-    },
+    // {
+    //   title: "Developers",
+    //   link: "#",
+    // },
     {
       title: "Blog",
       link: "#",
