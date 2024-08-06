@@ -291,7 +291,7 @@ const Benefits = ({ type }: { type: string }) => {
 
       <div className="container mx-auto items-center gap-32 space-y-20 xl:flex xl:space-y-0 xl:text-left">
         <div className="lg:flex-1">
-          <H4 className="!text-offWhite">
+          <H4 className="px-6 !text-offWhite sm:px-0">
             <span className="text-primaryGreen">Benefits</span> of our solution
           </H4>
           <Divider height={12} />

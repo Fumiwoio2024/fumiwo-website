@@ -35,13 +35,13 @@ const team = [
   {
     name: "Prosper Eravwuvieke",
     role: "Backend Engineering Lead",
-    linkedIn: "https://www.linkedin.com/in/sdu/",
+    linkedIn: "https://www.linkedin.com/in/prosper-eravwuvieke/",
     image: prosper,
   },
   {
     name: "Kainy Chike-Onyechi",
     role: "Frontend Engineering Lead",
-    linkedIn: "https://www.linkedin.com/in/sdu/",
+    linkedIn: "https://www.linkedin.com/in/kaine-chike-onyechi/",
     image: kainy,
   },
 ];
@@ -77,7 +77,11 @@ const Team = () => {
               <P className="text-xl font-bold text-primaryBlack">{item.name}</P>
               <P className="">{item.role}</P>
               <button>
-                <Link href={item.linkedIn}>
+                <Link
+                  href={item.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     width="44"
                     height="44"

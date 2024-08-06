@@ -17,8 +17,8 @@ const SolutionsHero = ({ type }: { type: string }) => {
     <>
       <section className="overflow-hidden pt-10 text-primaryBlack">
         <div className="justify-betwee container mx-auto items-center gap-4 space-y-[71px] px-4 lg:pr-0 xl:flex xl:space-y-0">
-          <div className="space-y-4 px-2 md:px-0 xl:w-6/12 xl:pr-5 xl:text-left">
-            <Tag className="">
+          <div className="space-y-4 px-2 sm:text-center md:px-0 xl:w-6/12 xl:pr-5 xl:text-left">
+            <Tag className="mx-0 sm:mx-auto lg:mx-auto">
               {isCreditScoring ? "Credit Scoring" : "Fraud"}
             </Tag>
 
@@ -36,13 +36,16 @@ const SolutionsHero = ({ type }: { type: string }) => {
             <div className="grid grid-cols-1 gap-4 xl:w-fit xl:grid-cols-2">
               <Link
                 href="https://calendly.com/hello-fumiwo/demo"
-                className=""
+                className="mx-auto block w-full lg:w-fit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <PrimaryButton className="">Book a demo</PrimaryButton>
+                <PrimaryButton className="lg:">Book a demo</PrimaryButton>
               </Link>
-              <Link href="mailto:hello@fumiwo.io" className="">
+              <Link
+                href="mailto:hello@fumiwo.io"
+                className="mx-auto block w-full lg:w-fit"
+              >
                 <SecondaryButton className="">Contact sales</SecondaryButton>
               </Link>
             </div>

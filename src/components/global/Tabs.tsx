@@ -75,7 +75,7 @@ const tabItemData = [
       {
         title: "Risk Analysis",
         description:
-          "Anomaly Detection: Uses advanced analytics to identify unusual patterns in phone usage that may indicate fraudulent activity.",
+          " Uses advanced analytics to identify unusual patterns in phone usage that may indicate fraudulent activity.",
       },
       {
         title: "Predictive Analytics",
@@ -114,7 +114,7 @@ const tabItemData = [
       {
         title: "Anomaly Detection",
         description:
-          "Anomaly Detection: Uses advanced analytics to identify unusual patterns in phone usage that may indicate fraudulent activity.",
+          " Uses advanced analytics to identify unusual patterns in phone usage that may indicate fraudulent activity.",
       },
       {
         title: "Fraud Scoring",
