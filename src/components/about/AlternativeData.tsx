@@ -17,7 +17,7 @@ const AlternativeData = () => {
             apart
           </H4>
           <Divider height={16} />
-          <P className="!text-white/70">
+          <P className="text-justify !text-white/70">
             Fumiwo&apos;s solution utilizes smartphone metadata to provide a
             more holistic view of a user&apos;s financial behavior. By analyzing
             patterns in communication, app usage, and location data.

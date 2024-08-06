@@ -37,7 +37,7 @@ const Story = () => {
           reduce defaults
         </H4>
         <div className="mt-3.5 md:mt-0 md:w-[55%]">
-          <P>
+          <P className="text-justify">
             In today&apos;s rapidly evolving financial landscape, making
             informed and accurate credit decisions is more critical than ever.
             Traditional credit scoring models often fall short in capturing the

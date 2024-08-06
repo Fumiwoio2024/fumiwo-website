@@ -13,7 +13,7 @@ const SolutionMetrics = ({
 }) => {
   return (
     <div className="text-center">
-      <P className="text-[28px] !font-extrabold !text-textHeader lg:!text-5xl">
+      <P className="!text-[32px] !font-extrabold !text-textHeader lg:!text-5xl">
         {numbers}
       </P>
       <Divider className="h-5 lg:h-3.5" height={14} />
@@ -36,10 +36,10 @@ const Conclusion = ({ type }: { type: string }) => {
       </div>
       <Divider className="h-20 lg:h-36" />
 
-      <div className="border px-6 py-10">
+      <div className="border px-6 py-10 sm:px-0">
         <div className="container mx-auto items-center gap-40 space-y-5 lg:flex">
-          <div className="space-y-3.5 lg:w-2/5 lg:space-y-4">
-            <H4 className="w-4/5 !text-textHeader">
+          <div className="space-y-3.5 sm:text-center lg:w-5/12 lg:space-y-4 lg:text-left">
+            <H4 className="!text-textHeader lg:max-w-[422px]">
               Some <span className="text-primaryGreen">counts</span> that matter
             </H4>
             <P className="text-normal text-lg leading-10 !text-paraGray/70">
@@ -47,7 +47,7 @@ const Conclusion = ({ type }: { type: string }) => {
             </P>
           </div>
 
-          <div className="no-scrollbar flex justify-between overflow-x-auto py-2 lg:w-3/5">
+          <div className="no-scrollbar flex justify-between overflow-x-auto py-2 lg:w-7/12">
             <SolutionMetrics numbers="+20%" title="Approval Rate" />
             <SolutionMetrics numbers="-15%" title="Default Rate" />
             <SolutionMetrics numbers="~0.2s" title="Avg Response Time" />

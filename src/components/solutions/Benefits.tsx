@@ -11,7 +11,7 @@ const creditScoreBenefitItems = [
   {
     title: "Enhanced Decision Making",
     description:
-      "Making Make well-informed lending decisions with a comprehensive understanding of each borrower's credit risk. Our solution provides deeper insights into borrower behavior and potential.",
+      "Make well-informed lending decisions with a comprehensive understanding of each borrower's credit risk. Our solution provides deeper insights into borrower behavior and potential.",
     Icon: (
       <svg
         width="37"
@@ -262,7 +262,7 @@ const SingleBenefit = ({
         <div key={index} className="flex gap-6">
           <div>{item.Icon}</div>
           <div className="space-y-4">
-            <h6 className="text-2xl font-semibold text-primaryGreen">
+            <h6 className="text-lg font-semibold text-primaryGreen lg:text-xl lg:font-bold">
               {item.title}
             </h6>
             <P className="!text-base !font-normal !text-white/70">
@@ -291,7 +291,7 @@ const Benefits = ({ type }: { type: string }) => {
 
       <div className="container mx-auto items-center gap-32 space-y-20 xl:flex xl:space-y-0 xl:text-left">
         <div className="lg:flex-1">
-          <H4 className="text-center !text-offWhite">
+          <H4 className="!text-offWhite">
             <span className="text-primaryGreen">Benefits</span> of our solution
           </H4>
           <Divider height={12} />
