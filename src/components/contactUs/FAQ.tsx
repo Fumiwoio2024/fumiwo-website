@@ -55,7 +55,7 @@ const FAQ = () => {
 	return (
     <section
       id="faq"
-      className="container mx-auto mt-28 grid px-6 pb-36 lg:flex"
+      className="container mx-auto grid px-6 pb-36 pt-28 lg:flex"
     >
       <div className="mb-10 flex-1 text-center lg:mb-0 lg:text-left">
         <H1 className="!leading-[58px] lg:w-80">
