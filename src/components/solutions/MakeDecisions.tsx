@@ -473,7 +473,7 @@ const AdvantageFeatures2 = ({
     <div className="flex min-h-[352px] max-w-sm flex-col items-center rounded-[18px] border p-8">
       <div>{icon}</div>
       <Divider height={28} />
-      <h3 className="text-lg font-semibold text-textHeader md:text-xl">
+      <h3 className="text-center text-lg font-semibold text-textHeader md:text-xl">
         {title}
       </h3>
       <Divider height={12} />
