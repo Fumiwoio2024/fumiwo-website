@@ -22,6 +22,10 @@ const footerItems = [
       title: "Contact us",
       link: "/contact-us",
     },
+    {
+      title: "FAQ",
+      link: "/contact-us#faq",
+    },
   ],
   [
     {
