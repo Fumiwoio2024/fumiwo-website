@@ -7,10 +7,10 @@ import Divider from "../global/Divider";
 
 const AlternativeData = () => {
   return (
-    <section className="bg-primaryBlack px-6 py-20 text-center md:py-32">
-      <div className="container mx-auto items-center gap-24 space-y-10 text-left md:flex md:space-y-0">
-        <Image src={newAlternativeData} alt="people" className="md:w-[50%]" />
-        <div className="md:w-[50%]">
+    <section className="bg-primaryBlack py-20 text-center md:py-32">
+      <div className="container items-center gap-24 space-y-10 px-6 text-left sm:mx-auto sm:px-0 md:flex md:space-y-0">
+        <Image src={newAlternativeData} alt="people" className="md:w-[45%]" />
+        <div className="md:w-[55%]">
           <H4 className="text-white">
             Our use of{" "}
             <span className="text-primaryGreen">alternative data</span> sets us

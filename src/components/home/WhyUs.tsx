@@ -26,7 +26,9 @@ const WhyUs = () => {
     <section className="relative mb-20 bg-primaryBlack py-12 md:py-28 lg:mb-32">
       <div className="container mx-auto items-center gap-20 space-y-20 px-6 sm:px-0 md:flex md:flex-row-reverse md:space-y-0 lg:text-left">
         <div className="md:w-6/12">
-          <H4 className="!text-offWhite">Why Choose Us</H4>
+          <H4 className="!text-offWhite">
+            Why Choose <span className="text-primaryGreen">us</span>
+          </H4>
           <Divider height={12} />
           <P className="text-justify !text-offWhite/60">
             Choose our platform to transform you evaluate credit risk by
