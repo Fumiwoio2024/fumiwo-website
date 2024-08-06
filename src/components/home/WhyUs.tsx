@@ -27,7 +27,7 @@ const WhyUs = () => {
       <div className="container mx-auto items-center gap-20 space-y-20 px-6 sm:px-0 md:flex md:flex-row-reverse md:space-y-0 lg:text-left">
         <div className="md:w-6/12">
           <H4 className="!text-offWhite">
-            Why Choose <span className="text-primaryGreen">us</span>
+            Why choose <span className="text-primaryGreen">us</span>
           </H4>
           <Divider height={12} />
           <P className="text-justify !text-offWhite/60">
