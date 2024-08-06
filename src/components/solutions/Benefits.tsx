@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { H4, P } from "../global/Typography";
 import Divider from "../global/Divider";
-import { PrimaryButton } from "../global/Buttons";
 import Image from "next/image";
 import benefits from "@images/benefits.png";
 import newWhyUs from "@images/new-why-us.png";

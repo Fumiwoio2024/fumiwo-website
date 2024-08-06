@@ -50,10 +50,9 @@ const WhyUs = () => {
             href="https://calendly.com/hello-fumiwo/demo"
             target="_blank"
             rel="noopener noreferrer"
+            className="mx-auto block self-center lg:ml-0"
           >
-            <PrimaryButton className="mx-auto block self-center lg:ml-0">
-              Book a demo
-            </PrimaryButton>
+            <PrimaryButton>Book a demo</PrimaryButton>
           </Link>
         </div>
 

@@ -42,6 +42,7 @@ const SolutionsHero = ({ type }: { type: string }) => {
               >
                 <PrimaryButton className="lg:">Book a demo</PrimaryButton>
               </Link>
+
               <Link
                 href="mailto:hello@fumiwo.io"
                 className="mx-auto block w-full lg:w-fit"

@@ -71,6 +71,7 @@ const ContactUs = () => {
           </P>
           <Divider height={34} className="hidden lg:block" />
           <Divider height={24} className="lg:hidden" />
+
           <Link href="/contact-us">
             <SecondaryButton className="mx-auto hover:bg-white/90 active:bg-white/70 md:!w-auto">
               Contact us

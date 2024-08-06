@@ -4,6 +4,7 @@ import { H3, H4, P } from '../global/Typography'
 import Image from 'next/image'
 import heroImage from '@images/hero-laptop.png'
 import { PrimaryButton } from '../global/Buttons'
+import Link from "next/link";
 
 type TAdvantageFeatureItem = {
   title: string;
@@ -516,7 +517,14 @@ const MakeDecisions = ({ type }: { type: string }) => {
       </div>
       <Divider height={62} />
 
-      <PrimaryButton>Start free trial</PrimaryButton>
+      <Link
+        href="https://calendly.com/hello-fumiwo/demo"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mx-auto block self-center lg:ml-0"
+      >
+        <PrimaryButton>Start free trial</PrimaryButton>
+      </Link>
     </section>
   );
 };
