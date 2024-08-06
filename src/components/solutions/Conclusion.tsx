@@ -2,7 +2,7 @@ import React from "react";
 import { H4, P } from "../global/Typography";
 import Divider from "../global/Divider";
 import Image from "next/image";
-import partners from "@images/partners-home.png";
+import partners from "@images/partners.png";
 
 const SolutionMetrics = ({
   numbers,
@@ -37,7 +37,7 @@ const Conclusion = ({ type }: { type: string }) => {
       <Divider className="h-20 lg:h-36" />
 
       <div className="border px-6 py-10">
-        <div className="mx-auto max-w-6xl items-center gap-40 space-y-5 lg:flex">
+        <div className="container mx-auto items-center gap-40 space-y-5 lg:flex">
           <div className="space-y-3.5 lg:w-2/5 lg:space-y-4">
             <H4 className="w-4/5 !text-textHeader">
               Some <span className="text-primaryGreen">counts</span> that matter

@@ -1,15 +1,14 @@
 import React from 'react'
 import { H4, P } from '../global/Typography'
 import Divider from '../global/Divider'
-import customer1 from '@images/customer1.png'
-import Image from 'next/image'
+import ibrahim from "@images/ibrahim.png";
+import Image from "next/image";
 
 const ClientFeedback = () => {
-	return (
-    <div className="px-4 pb-32 lg:pb-40">
-      {/* <div className='grid md:grid-cols-2 grid-cols-1 gap-32 max-w-6xl mx-auto items-center'> */}
-      <div className="mx-auto max-w-6xl items-center gap-20 md:flex">
-        <div className="mx-auto max-w-lg text-center md:w-2/5 lg:text-left">
+  return (
+    <div className="pb-32 lg:pb-40">
+      <div className="container mx-auto items-center gap-20 px-6 sm:px-0 md:flex">
+        <div className="md:w-2/5">
           <H4 className="">
             What <span className="text-primaryGreen">our clients</span> say
             about us
@@ -96,27 +95,29 @@ const ClientFeedback = () => {
 
           {/* Desktop */}
           <P className="hidden lg:block">
-            Mixed feelings but adequate results. Pros: technical skills &
-            Intuition about colors, fonts, & layout styles. Cons: Communication,
-            English, Detail Orientation, Creativity, Following the Brief (Style
-            guide, sample website, text requested). Off the mark 2 day delivery,
-            and 5-days of revision for one landing (good) page.
+            Fumiwo’s credit scoring solution is already making lending much more
+            secure. Glad to be working with a solution centered on delivering
+            robust credit decision and effective risk management framework.
           </P>
 
           {/* Mobile */}
           <P className="lg:hidden">
-            Data analysis software is a type of software tool used for data
-            analysis and reporting. It is designed to help businesses,
-            organizations.
+            Fumiwo’s credit scoring solution is already making lending much more
+            secure. Glad to be working with a solution centered on delivering
+            robust credit decision and effective risk management framework.
           </P>
 
           <div className="flex w-fit items-center justify-between gap-3">
             <div>
-              <Image src={customer1} alt="customer" />
+              <Image
+                src={ibrahim}
+                alt="customer"
+                className="w-11 rounded-full"
+              />
             </div>
             <div>
-              <P className="leading-6 !text-inputLabel">Arlene McCoy</P>
-              <P className="leading-6">Golio</P>
+              <P className="leading-6 !text-inputLabel">Ibrahim Abdullahi</P>
+              <P className="leading-6">Risk Officer, Royal Exchange MFB </P>
             </div>
           </div>
 
@@ -238,6 +239,6 @@ const ClientFeedback = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ClientFeedback

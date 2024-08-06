@@ -84,7 +84,7 @@ const HowItWorks = ({ type }: { type: string }) => {
 
   return (
     <div>
-      <div className="mx-auto max-w-6xl px-5 lg:px-20">
+      <div className="container mx-auto px-5 lg:px-20">
         <div className="lg:w-3/4">
           <H4 className="text-[28px] !text-textHeader">
             How it <span className="text-primaryGreen">works</span>

@@ -53,7 +53,7 @@ const FAQ = () => {
 	const [selected, setSelected] = useState('')
 
 	return (
-    <section className="mx-auto mt-28 grid max-w-6xl px-6 pb-36 lg:flex">
+    <section className="container mx-auto mt-28 grid px-6 pb-36 lg:flex">
       <div className="mb-10 flex-1 text-center lg:mb-0 lg:text-left">
         <H1 className="!leading-[58px] lg:w-80">
           Frequently Asked <span className="text-primaryGreen">Questions</span>

@@ -113,7 +113,6 @@ const Footer = () => {
             <div key={heading} className="">
               <h2 className="font-semibold md:text-lg">{heading}</h2>
               <div className="mt-6 space-y-4 md:mt-8 md:space-y-5">
-                {/*TODO: change 0 index to hIndex after updating footerItems data*/}
                 {footerItems[hIndex].map((fItem) => (
                   <li
                     key={fItem.title}

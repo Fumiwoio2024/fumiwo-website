@@ -25,12 +25,12 @@ const Story = () => {
 
       <Divider height={64} />
 
-      <div className="mx-auto max-w-5xl">
+      <div className="container mx-auto">
         <Image src={newStory} alt="story" className="w-full" />
       </div>
       <Divider className="h-20 md:h-32" />
 
-      <div className="mx-auto max-w-5xl gap-16 text-left md:flex">
+      <div className="container mx-auto gap-16 text-left md:flex">
         <H4 className="md:w-[55%] md:!leading-[72px] lg:text-justify">
           We exist to help you make{" "}
           <span className="text-primaryGreen">better credit decisions</span> and

@@ -1,25 +1,25 @@
 import React from 'react'
 import { H4, P } from '../global/Typography'
 import Divider from '../global/Divider'
-import { AboutUsTabs } from '../global/Tabs'
+import { KeyFeaturesTabs } from "../global/Tabs";
 
 const KeyFeatures = () => {
-	return (
+  return (
     <section className="pb-32">
-      <div className="mx-auto max-w-xl px-6 md:text-center">
-        <H4 className="mx-auto max-w-xl md:mb-4 md:!leading-[72px]">
+      <div className="container mx-auto px-6 sm:px-0 lg:text-center">
+        <H4 className="lg:mb-4 lg:!leading-[72px]">
           Key <span className="text-primaryGreen">features</span>
         </H4>
         <Divider height={14} />
-        <P className="mx-auto max-w-3xl text-sm !leading-6 md:!leading-8">
+        <P className="mx-auto max-w-3xl text-sm !leading-6 lg:!leading-8">
           Here some of the ways we ensure to deliver value to our clients and
           stay ahead of competitors
         </P>
       </div>
 
-      <AboutUsTabs />
+      <KeyFeaturesTabs />
     </section>
   );
-}
+};
 
 export default KeyFeatures

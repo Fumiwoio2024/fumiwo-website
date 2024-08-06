@@ -91,7 +91,7 @@ const MainSection = () => {
 
   return (
     <section className="px-6">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 justify-between gap-20 pt-14 lg:grid-cols-2">
+      <div className="container mx-auto grid grid-cols-1 justify-between gap-20 pt-14 lg:grid-cols-2">
         <div className="text-center lg:w-11/12 lg:text-left">
           <H1>
             Contact <span className="text-primaryGreen">us</span>

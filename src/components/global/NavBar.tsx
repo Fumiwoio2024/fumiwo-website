@@ -1,102 +1,97 @@
-'use client'
+"use client";
 
-import Link from 'next/link';
-import React, { ReactNode, useEffect, useRef, useState } from 'react'
-import Image, { StaticImageData } from 'next/image';
-import logo from '@images/fumiwo-logo.png'
-import logoColor from '@images/fmw-logo-color.png'
-import dropdownImage from '@images/dropdown-image.png'
-import { PrimaryButton } from './Buttons';
-import { useRouter, usePathname } from 'next/navigation';
-import { SideBar } from './SideBar';
-import { H5, P } from './Typography';
-import Divider from './Divider';
-
+import Link from "next/link";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import logo from "@images/fumiwo-logo.png";
+import logoColor from "@images/fmw-logo-color.png";
+import dropdownImage from "@images/dropdown-image.png";
+import { PrimaryButton } from "./Buttons";
+import { useRouter, usePathname } from "next/navigation";
+import { SideBar } from "./SideBar";
+import { H5, P } from "./Typography";
+import Divider from "./Divider";
 
 // Dropdown.js
 const Dropdown = () => {
-	return (
-		<div className="relative inline-block text-left">
-			<div>
-				<button
-					type="button"
-					className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
-					id="menu-button"
-					aria-expanded="true"
-					aria-haspopup="true"
-				>
-					Options
-					<svg
-						className="-mr-1 ml-2 h-5 w-5"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 20 20"
-						fill="currentColor"
-						aria-hidden="true"
-					>
-						<path
-							fillRule="evenodd"
-							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-							clipRule="evenodd"
-						/>
-					</svg>
-				</button>
-			</div>
+  return (
+    <div className="relative inline-block text-left">
+      <div>
+        <button
+          type="button"
+          className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none"
+          id="menu-button"
+          aria-expanded="true"
+          aria-haspopup="true"
+        >
+          Options
+          <svg
+            className="-mr-1 ml-2 h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
 
-			<div
-				className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none opacity-0 hover:opacity-100 group-hover:opacity-100"
-				role="menu"
-				aria-orientation="vertical"
-				aria-labelledby="menu-button"
-				tabIndex={-1}
-			>
-				<div className="py-1" role="none">
-					<a
-						href="#"
-						className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-						role="menuitem"
-						tabIndex={-1}
-						id="menu-item-0"
-					>
-						Account settings
-					</a>
-					<a
-						href="#"
-						className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-						role="menuitem"
-						tabIndex={-1}
-						id="menu-item-1"
-					>
-						Support
-					</a>
-					<a
-						href="#"
-						className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-						role="menuitem"
-						tabIndex={-1}
-						id="menu-item-2"
-					>
-						License
-					</a>
-				</div>
-			</div>
-		</div>
-	);
+      <div
+        className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white opacity-0 shadow-lg ring-1 ring-black ring-opacity-5 hover:opacity-100 focus:outline-none group-hover:opacity-100"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="menu-button"
+        tabIndex={-1}
+      >
+        <div className="py-1" role="none">
+          <a
+            href="#"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+            tabIndex={-1}
+            id="menu-item-0"
+          >
+            Account settings
+          </a>
+          <a
+            href="#"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+            tabIndex={-1}
+            id="menu-item-1"
+          >
+            Support
+          </a>
+          <a
+            href="#"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            role="menuitem"
+            tabIndex={-1}
+            id="menu-item-2"
+          >
+            License
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-
-
-
-
 type TNav = {
-	title: string;
-	link: string;
-	description: string;
-	image: StaticImageData | ReactNode;
-}
+  title: string;
+  link: string;
+  description: string;
+  image: StaticImageData | ReactNode;
+};
 
 export type TNavLinks = TNav & {
-	dropDownLink?: TNav[]
-}
+  dropDownLink?: TNav[];
+};
 
 export const navLinks: TNavLinks[] = [
   {
@@ -276,8 +271,11 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
         onMouseOut={() => setToggleDropDownName("")}
         className={`transition md:py-6 ${dark ? "bg-primaryBlack text-white" : "bg-white text-linkGray"}`}
       >
-        <div onClick={(e) => e.stopPropagation()} className="container mx-auto">
-          <div className="flex items-center justify-between p-4">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="container mx-auto px-6 sm:px-0"
+        >
+          <div className="flex items-center justify-between py-4">
             <Link href="/">
               <Image
                 src={dark ? logo : logoColor}
@@ -320,25 +318,29 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
                   </div>
 
                   {navLink.dropDownLink && (
-                    <div className="absolute -left-1/2 top-6 -translate-x-1/3 pt-5">
+                    <div className="absolute -left-1/2 top-6 z-10 -translate-x-1/3 pt-5">
                       <div
-                        className={`flex min-w-[810px] cursor-default gap-6 rounded-md bg-white px-10 py-8 shadow-optionShadow ${toggleDropDownName === navLink.title ? "block" : "hidden"}`}
+                        className={`flex cursor-default gap-6 rounded-md bg-white px-10 py-8 shadow-optionShadow ${[
+                          toggleDropDownName === navLink.title
+                            ? "block"
+                            : "hidden",
+                          navLink.title !== "Resources"
+                            ? "min-w-[810px]"
+                            : "min-w-[372px]",
+                        ].join(" ")}`}
                       >
-                        <section className="flex-1 items-center">
-                          <H5 className="!text-[28px]">{navLink.title}</H5>
-                          <Divider height={4} />
-                          <P className="text-justify !text-base">
-                            Explore Fumiwo’s range of powerful end-to-end
-                            solutions that resonate with your various business
-                            requirements.
-                          </P>
-                          <Divider height={18} />
-                          {/* <Image
-														src={navLink.image as StaticImageData}
-														alt='dropdown image'
-														className='w-[164px] h-[129px]'
-													/> */}
-                        </section>
+                        {navLink.title !== "Resources" && (
+                          <section className="flex-1 items-center">
+                            <H5 className="!text-[28px]">{navLink.title}</H5>
+                            <Divider height={4} />
+                            <P className="text-justify !text-base">
+                              Explore Fumiwo’s range of powerful end-to-end
+                              solutions that resonate with your various business
+                              requirements.
+                            </P>
+                            {/* <Divider height={18} /> */}
+                          </section>
+                        )}
                         <section className="flex-1 space-y-7">
                           {navLink.dropDownLink.map((item, index) => (
                             <div key={index} className="">
@@ -396,4 +398,4 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
   );
 };
 
-export default NavBar
+export default NavBar;
