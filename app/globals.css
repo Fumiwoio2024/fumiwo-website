@@ -65,10 +65,7 @@
   }
 }
 .content.selected {
-  height: 150px;
-  /* border-top: 1px #090F4733 solid; */
-  /* transition: height 400ms; */
-
+  height: 260px;
   .submitted-complaint {
     background-color: #F5F8FE;
 
