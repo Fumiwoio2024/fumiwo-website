@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="no-scrollbar overflow-x-hidden">
+    <html lang="en" className="overflow-x-hidden">
       <body className={poppins.className}>
         {children}
         <ContactUs />
