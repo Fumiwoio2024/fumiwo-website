@@ -36,15 +36,16 @@ const MainSection = () => {
 
 	const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+
 
     if (Object.values(formData).includes("")) {
       setError("Please fill in all fields. All fields are required");
       return;
     }
 
-    const portalId = "143536254";
-    const formGuid = "67baae51-0580-4de1-91c7-1d0ae3b3bd85";
+    const portalId = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID;
+    const formGuid = process.env.NEXT_PUBLIC_HUBSPOT_FORM_GUID;
+    
     const config = {
       headers: {
         "Content-Type": "application/json",
