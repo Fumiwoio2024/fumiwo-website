@@ -31,9 +31,9 @@ const WhyUs = () => {
           </H4>
           <Divider height={12} />
           <P className="text-justify !text-offWhite/60">
-            Choose our platform to transform you evaluate credit risk by
+            Choose our platform to transform and evaluate your credit risk by
             leveraging the power of phone usage data. By providing a
-            comprehensive view of borrower behavior, it enables more accurate,
+            comprehensive view of borrower behaviour, it enables more accurate,
             fair, and efficient credit decisions, ultimately contributing to
             better financial outcomes for both lenders and borrowers.
           </P>

@@ -15,8 +15,7 @@ const Solution = () => {
         <Divider height={16} />
         <P className="max-w-3xl md:mx-auto">
           Deliver credits in full confidence with our AI driven platform based
-          on <b>permissioned smartphone metadata</b> to provide solutions for
-          your activities
+          on <b>permissioned smartphone metadata</b>
         </P>
       </div>
 

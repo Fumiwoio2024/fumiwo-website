@@ -21,9 +21,9 @@ const team = [
     image: member2,
   },
   {
-    name: "Sébastien Doncker",
+    name: "Cedric Artigue",
     role: "Chief Technology Officer",
-    linkedIn: "https://www.linkedin.com/in/sebastien-doncker/",
+    linkedIn: "https://www.linkedin.com/in/cedricartigue/",
     image: member3,
   },
   // {
