@@ -30,7 +30,7 @@ const SolutionsHero = ({ type }: { type: string }) => {
             <h5 className="leading-8 text-paraGray/70">
               {isCreditScoring
                 ? "Leverage on smartphone metadata to get a more holistic view of your user's behavior."
-                : "Leverage on our machine learning model to identify potentially fraudulent user behaviour, thereby minimizing risks."}
+                : "Leverage our machine learning model to identify potentially fraudulent user behaviour, thereby minimizing risks."}
             </h5>
             <Divider height={2} />
             <div className="grid grid-cols-1 gap-4 xl:w-fit xl:grid-cols-2">

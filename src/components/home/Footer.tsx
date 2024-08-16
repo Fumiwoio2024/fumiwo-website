@@ -136,8 +136,9 @@ const Footer = () => {
 
       <section className="mx-auto flex w-4/5 flex-wrap items-center justify-between border-t border-bottomFooterBorder pt-8 text-xxs text-logoGray md:text-sm">
         <div className="flex w-fit flex-1 items-center gap-1.5">
+          <span className="text-xl"> 🇳🇬</span>
           <p> EN </p>
-          <svg
+          {/* <svg
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -153,7 +154,7 @@ const Footer = () => {
               stroke-linecap="round"
               stroke-linejoin="round"
             />
-          </svg>
+          </svg> */}
           {/* Mobile */}
           <svg
             width="13"
