@@ -63,11 +63,11 @@ const SingleWork = ({
 }) => {
   return (
     <>
-      <div className="justify-between space-y-4 py-10 pr-5 lg:flex lg:space-y-0">
-        <h6 className="text-xl font-bold text-textHeader lg:w-2/5 lg:text-[28px]">
+      <div className="group justify-between space-y-4 py-10 pr-5 lg:flex lg:space-y-0">
+        <h6 className="text-xl font-bold text-textHeader transition duration-200 group-hover:text-primaryGreen lg:w-2/5 lg:text-[28px]">
           0{index}. {title}
         </h6>
-        <P className="text-justify text-sm font-normal leading-10 !text-paraGray/70 lg:w-7/12 lg:text-lg">
+        <P className="text-justify text-sm font-normal leading-10 !text-paraGray/70 group-hover:!text-paraGray lg:w-7/12 lg:text-lg">
           {description}
         </P>
       </div>
