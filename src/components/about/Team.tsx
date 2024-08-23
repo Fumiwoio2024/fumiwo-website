@@ -6,7 +6,7 @@ import Divider from "../global/Divider";
 import member1 from "@images/member1.png";
 import member5 from "@images/leslie.png";
 import member2 from "@images/kayode.png";
-import member3 from "@images/dedonker.png";
+import member3 from "@images/cedric.png";
 import member4 from "@images/sebastian2.png";
 import kainy from "@images/kainy.png";
 import prosper from "@images/prosper.png";

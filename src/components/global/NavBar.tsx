@@ -269,7 +269,7 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
       />
       <nav
         onMouseOut={() => setToggleDropDownName("")}
-        className={`transition md:py-6 ${dark ? "bg-primaryBlack text-white" : "bg-white text-linkGray"}`}
+        className={`transition ${dark ? "bg-primaryBlack text-white" : "bg-white text-linkGray"}`}
       >
         <div
           onClick={(e) => e.stopPropagation()}
@@ -280,7 +280,7 @@ const NavBar = ({ dark }: { dark?: boolean }) => {
               <Image
                 src={dark ? logo : logoColor}
                 alt="logo"
-                className="max-w-[158px] cursor-pointer"
+                className="max-w-[258px] cursor-pointer"
               />
             </Link>
 
