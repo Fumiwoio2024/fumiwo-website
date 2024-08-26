@@ -158,7 +158,7 @@ const HomeSolutionsTabItem = ({
         ))}
 
         {/* <Link
-          href="https://calendly.com/hello-fumiwo/demo"
+          href="https://calendly.com/hello-fumiwo/a-new-way-to-assess-creditworthiness"
           className="mx-auto block self-center lg:ml-0"
           target="_blank"
           rel="noopener noreferrer"
@@ -877,7 +877,7 @@ export const KeyFeaturesTabs = () => {
             ))}
 
             <Link
-              href="https://calendly.com/hello-fumiwo/demo"
+              href="https://calendly.com/hello-fumiwo/a-new-way-to-assess-creditworthiness"
               className="mx-auto ml-24 block w-fit self-center rounded-3xl pl-2"
               target="_blank"
               rel="noopener noreferrer"
@@ -916,7 +916,7 @@ export const KeyFeaturesTabs = () => {
         ))}
 
         <Link
-          href="https://calendly.com/hello-fumiwo/demo"
+          href="https://calendly.com/hello-fumiwo/a-new-way-to-assess-creditworthiness"
           className="mx-auto block self-center sm:w-fit"
           target="_blank"
           rel="noopener noreferrer"

@@ -95,7 +95,7 @@ export const SideBar = forwardRef<HTMLDivElement, TSideBar>(
         </div>
 
         <Link
-          href="https://calendly.com/hello-fumiwo/demo"
+          href="https://calendly.com/hello-fumiwo/a-new-way-to-assess-creditworthiness"
           target="_blank"
           rel="noopener noreferrer"
         >

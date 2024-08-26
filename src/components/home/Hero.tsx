@@ -25,7 +25,7 @@ const Hero = () => {
           <Divider height={16} />
 
           <Link
-            href="https://calendly.com/hello-fumiwo/demo"
+            href="https://calendly.com/hello-fumiwo/a-new-way-to-assess-creditworthiness"
             className="mx-auto block xl:mx-0"
             target="_blank"
             rel="noopener noreferrer"

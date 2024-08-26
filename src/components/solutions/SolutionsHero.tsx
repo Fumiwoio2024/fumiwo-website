@@ -35,7 +35,7 @@ const SolutionsHero = ({ type }: { type: string }) => {
             <Divider height={2} />
             <div className="grid grid-cols-1 gap-4 xl:w-fit xl:grid-cols-2">
               <Link
-                href="https://calendly.com/hello-fumiwo/demo"
+                href="https://calendly.com/hello-fumiwo/a-new-way-to-assess-creditworthiness"
                 className="mx-auto block w-full lg:w-fit"
                 target="_blank"
                 rel="noopener noreferrer"
